@@ -1,3 +1,32 @@
-/* 
-    General Styles used on every website (Don't Repeat Yourself)
-*/
+.verticalSpan {
+  min-height: 83%;
+}
+.navbar-brand {
+  color: black;
+}
+.float-start {
+  width: 50%;
+  margin: auto;
+}
+img {
+  width: 30%;
+  margin-left: 10%;
+}
+.btn{
+    padding:0px;
+}
+.fas{
+    font-size:25px;
+    color:#C5D8A4;
+    width:30px;
+}
+span{
+    margin-left:40%;
+}
+.buttonfooter{
+    margin-left:5%;
+    float:right;
+}
+.footer{
+    height:6%;
+}

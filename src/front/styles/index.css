@@ -1,16 +1,22 @@
+body{
+  background-color:#4E6C50;
+}
 .verticalSpan {
   min-height: 83%;
 }
 .navbar-brand {
   color: black;
+  font-family:cursive;
+}
+.navbar{
+  background-color: #AA8B56;
+}
+.footer{
+  background-color: #AA8B56;
 }
 .float-start {
   width: 50%;
   margin: auto;
-}
-img {
-  width: 30%;
-  margin-left: 10%;
 }
 .btn{
     padding:0px;
@@ -29,4 +35,37 @@ span{
 }
 .footer{
     height:6%;
+}
+.expiration1{
+  border: 1px solid black;
+  margin-top:5%;
+  margin-bottom:5%;
+  text-align:center;
+}
+.expiration2{
+  /* border: 1px solid black; */
+  text-align:center;
+}
+img{
+  width:300px;
+  border-radius:50%;
+}
+.list-group-item{
+  background-color:#4E6C50;
+  border:0px;
+  margin-bottom:10px;
+}
+.btn{
+  background-color: #AA8B56;
+  margin-left:5px;
+  margin-top:5px;
+  font-family:cursive;
+}
+h1{
+  color: #AA8B56;
+  font-family:cursive;
+}
+h2{
+  color: #AA8B56;
+  font-family:cursive;
 }

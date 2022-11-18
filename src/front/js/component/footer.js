@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 export const Footer = () => (
-  <footer className="footer bg-light">
+  <footer className="footer">
     <div className="container-fluid align-content-around justify-content-around">
       <a className="navbar-brand" href="#" style={{ marginTop: "0.25rem" }}>
           <span>Copyright © Meal it! 2022</span>

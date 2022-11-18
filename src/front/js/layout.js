@@ -5,6 +5,7 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./pages/home";
 import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
+import { FoodExpiring } from "./pages/foodexpiring";
 import { MealPlanning } from "./pages/mealplanning";
 import { PantryScan } from "./pages/pantryscan";
 import { Recipes } from "./pages/recipes";
@@ -30,6 +31,7 @@ const Layout = () => {
               <Route element={<Demo />} path="/demo" />
               <Route element={<Single />} path="/single/:theid" />
               <Route element={<h1>Not found!</h1>} />
+              <Route element={<FoodExpiring />} path="/foodexpiring" />
               <Route element={<MealPlanning />} path="/mealplanning" />
               <Route element={<PantryScan />} path="/pantryscan" />
               <Route element={<Recipes />} path="/recipes" />

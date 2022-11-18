@@ -45,6 +45,7 @@ span{
 .expiration2{
   /* border: 1px solid black; */
   text-align:center;
+  border-top:1px solid black;
 }
 img{
   width:300px;
@@ -68,4 +69,13 @@ h1{
 h2{
   color: #AA8B56;
   font-family:cursive;
+}
+.foodexptitle{
+  text-align:center;
+  font-family:cursive;
+  margin-top:10px;
+  color: #224B0C;
+}
+.foodexptitleimg{
+  border-radius:0px;
 }

@@ -3,35 +3,70 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import propTypes from "prop-types";
 
-// export const Modal = (propTypes) => {
-//   <div className="modal" tabindex="-1">
-//   <div className="modal-dialog">
-//     <div className="modal-content">
-//       <div className="modal-header">
-//         <h5 className="modal-title">Modal title</h5>
-//         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-//       </div>
-//       <div className="modal-body">
-//         <p>Modal body text goes here.</p>
-//       </div>
-//       <div className="modal-footer">
-//         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-//         <button type="button" className="btn btn-primary">Save changes</button>
-//       </div>
-//     </div>
-//   </div>
-// </div>
-// }
-
 export const FoodExpiring = () => {
   const { store, actions } = useContext(Context);
 
   return (
     <div className="container">
-      <div className="expiration1">
-        <p>- Earliest expiration in the next week</p>
-        <p>- Products expiring in the next month</p>
+      <div className="foodexptitle">
+        <h3>
+          <p>
+            Organize all your food at home, by their categories from the{" "}
+            <strong>Food Pyramid!</strong>
+          </p>
+          <p>
+            What does <strong>Food Pyramid</strong> means?
+          </p>
+          <p>Click here to learn more!</p>
+        </h3>
       </div>
+
+      {/* <div className="accordion">
+        <div className="accordion-item">
+          <h2 className="accordion-header">
+            <button
+              className="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              <p>- Earliest expiration in the next week</p>
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            className="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div className="accordion-body">Here we'll have a list</div>
+          </div>
+        </div>
+        <div className="accordion-item">
+          <h2 className="accordion-header" id="headingTwo">
+            <button
+              className="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              <p>- Products expiring in the next month</p>
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            className="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div className="accordion-body">Here we'll have another list</div>
+          </div>
+        </div>
+      </div> */}
       <div className="expiration2">
         <h1>
           <strong>Daily Food Pyramid</strong>
@@ -48,7 +83,7 @@ export const FoodExpiring = () => {
                   data-bs-toggle="modal"
                   data-bs-target="#staticBackdrop"
                 >
-                 <i class="fas fa-utensils"></i> Learn More
+                  <i class="fas fa-utensils"></i> Learn More
                 </button>
                 <button type="button" className="btn">
                   <i class="fas fa-plus"></i>Add item to list
@@ -92,7 +127,7 @@ export const FoodExpiring = () => {
                   data-bs-toggle="modal"
                   data-bs-target="#staticBackdrop"
                 >
-                 <i class="fas fa-utensils"></i> Learn More
+                  <i class="fas fa-utensils"></i> Learn More
                 </button>
                 <button type="button" className="btn">
                   <i class="fas fa-plus"></i>Add item to list
@@ -147,7 +182,7 @@ export const FoodExpiring = () => {
                   data-bs-toggle="modal"
                   data-bs-target="#staticBackdrop"
                 >
-                 <i class="fas fa-utensils"></i> Learn More
+                  <i class="fas fa-utensils"></i> Learn More
                 </button>
                 <button type="button" className="btn">
                   <i class="fas fa-plus"></i>Add item to list
@@ -197,7 +232,7 @@ export const FoodExpiring = () => {
                   data-bs-toggle="modal"
                   data-bs-target="#staticBackdrop"
                 >
-                 <i class="fas fa-utensils"></i> Learn More
+                  <i class="fas fa-utensils"></i> Learn More
                 </button>
                 <button type="button" className="btn">
                   <i class="fas fa-plus"></i> Add item to list
@@ -245,7 +280,7 @@ export const FoodExpiring = () => {
                   data-bs-toggle="modal"
                   data-bs-target="#staticBackdrop"
                 >
-                 <i class="fas fa-utensils"></i> Learn More
+                  <i class="fas fa-utensils"></i> Learn More
                 </button>
                 <button type="button" className="btn">
                   <i class="fas fa-plus"></i> Add item to list
@@ -292,7 +327,7 @@ export const FoodExpiring = () => {
                   data-bs-toggle="modal"
                   data-bs-target="#staticBackdrop"
                 >
-                 <i class="fas fa-utensils"></i> Learn More
+                  <i class="fas fa-utensils"></i> Learn More
                 </button>
                 <button type="button" className="btn">
                   <i class="fas fa-plus"></i> Add item to list

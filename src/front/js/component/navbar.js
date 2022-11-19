@@ -10,41 +10,26 @@ export const Navbar = () => {
         </Link>
 
         <Link to="/foodexpiring">
-          <li>
-            <a className="dropdown-item" href="#">
-              Food expiring
-            </a>
-          </li>
+
+        <span className="navbar-brand mb-0 h1">Food Pyramid</span>
+
         </Link>
 
         <Link to="/mealplanning">
-          <li>
-            <a className="dropdown-item" href="#">
-              Meal planning/Shopping list
-            </a>
-          </li>
+        <span className="navbar-brand mb-0 h1">Shopping list</span>
         </Link>
 
         <Link to="/pantryscan">
-          <li>
-            <a className="dropdown-item" href="#">
-              Pantry scan
-            </a>
-          </li>
+        <span className="navbar-brand mb-0 h1">Pantry Scan</span>
         </Link>
 
         <Link to="/recipes">
-          <li>
-            <a className="dropdown-item" href="#">
-              Recipes
-            </a>
-          </li>
+        <span className="navbar-brand mb-0 h1">Recipes</span>
         </Link>
-        <li>
-          <a className="dropdown-item" href="#">
-            About us
-          </a>
-        </li>
+
+        <Link to="/">
+        <span className="navbar-brand mb-0 h1">About us</span>
+        </Link>
       </div>
     </nav>
   );

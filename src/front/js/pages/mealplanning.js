@@ -17,9 +17,12 @@ export const MealPlanning = () => {
         <div>
           <div className="float-end me-5">
             <h1>Shopping List</h1>
-            <h2>Breakfast</h2>
-            <h2>Lunch</h2>
-            <h2>Dinner</h2>
+            <h2>Healthy Fat</h2>
+            <h2>Protein</h2>
+            <h2>Dairy</h2>
+            <h2>Grains/Carbohydrates</h2>
+            <h2>Vegetables</h2>
+            <h2>Fruits</h2>
           </div>
         </div>
       </div>

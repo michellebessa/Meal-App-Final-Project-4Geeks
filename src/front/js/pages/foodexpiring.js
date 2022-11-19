@@ -8,18 +8,6 @@ export const FoodExpiring = () => {
 
   return (
     <div className="container">
-      <div className="foodexptitle">
-        <h3>
-          <p>
-            Organize all your food at home, by their categories from the{" "}
-            <strong>Food Pyramid!</strong>
-          </p>
-          <p>
-            What does <strong>Food Pyramid</strong> means?
-          </p>
-          <p>Click here to learn more!</p>
-        </h3>
-      </div>
 
       {/* <div className="accordion">
         <div className="accordion-item">
@@ -67,6 +55,7 @@ export const FoodExpiring = () => {
           </div>
         </div>
       </div> */}
+
       <div className="expiration2">
         <h1>
           <strong>Daily Food Pyramid</strong>

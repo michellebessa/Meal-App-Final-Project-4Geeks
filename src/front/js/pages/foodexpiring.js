@@ -3,59 +3,30 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import propTypes from "prop-types";
 
+const FoodExpiringModal = (props) => {
+  return (
+    <div className="modal fade" id={props.modalid}>
+      <div className="modal-dialog">
+        <div className="modal-content">
+          <div className="modal-body">
+            {props.children}
+            <div>
+              <button type="button" className="btn" data-bs-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export const FoodExpiring = () => {
   const { store, actions } = useContext(Context);
 
   return (
     <div className="container">
-
-      {/* <div className="accordion">
-        <div className="accordion-item">
-          <h2 className="accordion-header">
-            <button
-              className="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseOne"
-              aria-expanded="true"
-              aria-controls="collapseOne"
-            >
-              <p>- Earliest expiration in the next week</p>
-            </button>
-          </h2>
-          <div
-            id="collapseOne"
-            className="accordion-collapse collapse show"
-            aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample"
-          >
-            <div className="accordion-body">Here we'll have a list</div>
-          </div>
-        </div>
-        <div className="accordion-item">
-          <h2 className="accordion-header" id="headingTwo">
-            <button
-              className="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseTwo"
-              aria-expanded="false"
-              aria-controls="collapseTwo"
-            >
-              <p>- Products expiring in the next month</p>
-            </button>
-          </h2>
-          <div
-            id="collapseTwo"
-            className="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample"
-          >
-            <div className="accordion-body">Here we'll have another list</div>
-          </div>
-        </div>
-      </div> */}
-
       <div className="expiration2">
         <h1>
           <strong>Daily Food Pyramid</strong>
@@ -70,7 +41,7 @@ export const FoodExpiring = () => {
                   type="button"
                   className="btn"
                   data-bs-toggle="modal"
-                  data-bs-target="#staticBackdrop"
+                  data-bs-target="#fatmodal"
                 >
                   <i class="fas fa-utensils"></i> Learn More
                 </button>
@@ -78,31 +49,15 @@ export const FoodExpiring = () => {
                   <i class="fas fa-plus"></i>Add item to list
                 </button>
 
-                <div className="modal fade" id="staticBackdrop">
-                  <div className="modal-dialog">
-                    <div className="modal-content">
-                      <div className="modal-body">
-                        <h2>What is Healthy Fat?</h2>A small amount of fat is an
-                        essential part of a healthy, balanced diet. Fat is a
-                        source of essential fatty acids, which the body cannot
-                        make itself. Fat helps the body absorb vitamin A,
-                        vitamin D and vitamin E. These vitamins are fat-soluble,
-                        which means they can only be absorbed with the help of
-                        fats. Examples of fats are butter, cheese, oils, nuts,
-                        seeds and chocolates.
-                        <div>
-                          <button
-                            type="button"
-                            className="btn"
-                            data-bs-dismiss="modal"
-                          >
-                            Close
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <FoodExpiringModal modalid="fatmodal">
+                  <h2>What is Healthy Fat?</h2>A small amount of fat is an
+                  essential part of a healthy, balanced diet. Fat is a source of
+                  essential fatty acids, which the body cannot make itself. Fat
+                  helps the body absorb vitamin A, vitamin D and vitamin E.
+                  These vitamins are fat-soluble, which means they can only be
+                  absorbed with the help of fats. Examples of fats are butter,
+                  cheese, oils, nuts, seeds and chocolates.
+                </FoodExpiringModal>
               </li>
             </div>
 
@@ -114,7 +69,7 @@ export const FoodExpiring = () => {
                   type="button"
                   className="btn"
                   data-bs-toggle="modal"
-                  data-bs-target="#staticBackdrop"
+                  data-bs-target="#proteinmodal"
                 >
                   <i class="fas fa-utensils"></i> Learn More
                 </button>
@@ -122,42 +77,22 @@ export const FoodExpiring = () => {
                   <i class="fas fa-plus"></i>Add item to list
                 </button>
 
-                <div className="modal fade" id="staticBackdrop">
-                  <div className="modal-dialog">
-                    <div className="modal-content">
-                      <div className="modal-body">
-                        <h2>What is Protein?</h2>Protein is found throughout the
-                        body—in muscle, bone, skin, hair, and virtually every
-                        other body part or tissue. It makes up the enzymes that
-                        power many chemical reactions and the hemoglobin that
-                        carries oxygen in your blood. At least 10,000 different
-                        proteins make you what you are and keep you that way.
-                        Protein is made from twenty-plus basic building blocks
-                        called amino acids. Because we don’t store amino acids,
-                        our bodies make them in two different ways: either from
-                        scratch, or by modifying others. Nine amino
-                        acids—histidine, isoleucine, leucine, lysine,
-                        methionine, phenylalanine, threonine, tryptophan, and
-                        valine—known as the essential amino acids, must come
-                        from food. Examples of protein are meats, poultry,
-                        protein powders, fish, eggs, shrimp, crab and lobsters,
-                        etc.
-                        <div>
-                          <button
-                            type="button"
-                            className="btn"
-                            data-bs-dismiss="modal"
-                          >
-                            Close
-                          </button>
-                          <button type="button" className="btn">
-                            <i class="fas fa-plus"></i>Add item to list
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <FoodExpiringModal modalid="proteinmodal">
+                  <h2>What is Protein?</h2>Protein is found throughout the
+                  body—in muscle, bone, skin, hair, and virtually every other
+                  body part or tissue. It makes up the enzymes that power many
+                  chemical reactions and the hemoglobin that carries oxygen in
+                  your blood. At least 10,000 different proteins make you what
+                  you are and keep you that way. Protein is made from
+                  twenty-plus basic building blocks called amino acids. Because
+                  we don’t store amino acids, our bodies make them in two
+                  different ways: either from scratch, or by modifying others.
+                  Nine amino acids—histidine, isoleucine, leucine, lysine,
+                  methionine, phenylalanine, threonine, tryptophan, and
+                  valine—known as the essential amino acids, must come from
+                  food. Examples of protein are meats, poultry, protein powders,
+                  fish, eggs, shrimp, crab and lobsters, etc.
+                </FoodExpiringModal>
               </li>
             </div>
 

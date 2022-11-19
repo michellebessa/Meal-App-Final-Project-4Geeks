@@ -104,41 +104,22 @@ export const FoodExpiring = () => {
                   type="button"
                   className="btn"
                   data-bs-toggle="modal"
-                  data-bs-target="#staticBackdrop"
+                  data-bs-target="#dairymodal"
                 >
                   <i class="fas fa-utensils"></i> Learn More
                 </button>
                 <button type="button" className="btn">
                   <i class="fas fa-plus"></i>Add item to list
                 </button>
-
-                <div className="modal fade" id="staticBackdrop">
-                  <div className="modal-dialog">
-                    <div className="modal-content">
-                      <div className="modal-body">
-                        <h2>What is Dairy?</h2>The nutrients and types of fat in
-                        dairy are involved with bone health, cardiovascular
-                        disease, and other conditions. Calcium, vitamin D, and
-                        phosphorus are important for bone building, and the high
-                        potassium content of dairy foods can help lower blood
-                        pressure. Examples of dairy are milk, yogurt, cheese,
-                        Greek yogurt, and cottage cheese.
-                        <div>
-                          <button
-                            type="button"
-                            className="btn"
-                            data-bs-dismiss="modal"
-                          >
-                            Close
-                          </button>
-                          <button type="button" className="btn">
-                            <i class="fas fa-plus"></i> Add item to list
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                        <FoodExpiringModal modalid="dairymodal">
+                          <h2>What is Dairy?</h2>The nutrients and types of fat
+                          in dairy are involved with bone health, cardiovascular
+                          disease, and other conditions. Calcium, vitamin D, and
+                          phosphorus are important for bone building, and the
+                          high potassium content of dairy foods can help lower
+                          blood pressure. Examples of dairy are milk, yogurt,
+                          cheese, Greek yogurt, and cottage cheese.
+                        </FoodExpiringModal>
               </li>
             </div>
           </div>
@@ -166,16 +147,18 @@ export const FoodExpiring = () => {
                   <div className="modal-dialog">
                     <div className="modal-content">
                       <div className="modal-body">
-                        <h2>What are Grains/Carbohydrates?</h2>Carbohydrates, or
-                        carbs, are sugar molecules. Along with proteins and
-                        fats, carbohydrates are one of three main nutrients
-                        found in foods and drinks. Your body breaks down
-                        carbohydrates into glucose. Glucose, or blood sugar, is
-                        the main source of energy for your body's cells,
-                        tissues, and organs. Carbohydrates include sugars,
-                        starches, and fiber. Examples of carbohydrates are
-                        bread, pasta, rice, fruits, cereal, beans, potato, sweet
-                        potato, and some vegetables.
+                        <FoodExpiringModal modalid="grainscarbohydratesmodal">
+                          <h2>What are Grains/Carbohydrates?</h2>Carbohydrates,
+                          or carbs, are sugar molecules. Along with proteins and
+                          fats, carbohydrates are one of three main nutrients
+                          found in foods and drinks. Your body breaks down
+                          carbohydrates into glucose. Glucose, or blood sugar,
+                          is the main source of energy for your body's cells,
+                          tissues, and organs. Carbohydrates include sugars,
+                          starches, and fiber. Examples of carbohydrates are
+                          bread, pasta, rice, fruits, cereal, beans, potato,
+                          sweet potato, and some vegetables.
+                        </FoodExpiringModal>
                         <div>
                           <button
                             type="button"
@@ -214,14 +197,17 @@ export const FoodExpiring = () => {
                   <div className="modal-dialog">
                     <div className="modal-content">
                       <div className="modal-body">
-                        <h2>What are Vegetables?</h2>Eating vegetables
-                        represents important part of your daily diet that
-                        provides our bodies with important nutrients. Vegetables
-                        can regulate our metabolism, protect skin, help our
-                        bones, bloodstream, heart, guts, reduce risk of cancer,
-                        preserve our eyesight and much more. Examples of
-                        vegetables are spinach, carrots, broccoli, cauliflower,
-                        asparagus, green beans, kale, onions, peppers, and etc.
+                        <FoodExpiringModal modalid="vegetablesmodal">
+                          <h2>What are Vegetables?</h2>Eating vegetables
+                          represents important part of your daily diet that
+                          provides our bodies with important nutrients.
+                          Vegetables can regulate our metabolism, protect skin,
+                          help our bones, bloodstream, heart, guts, reduce risk
+                          of cancer, preserve our eyesight and much more.
+                          Examples of vegetables are spinach, carrots, broccoli,
+                          cauliflower, asparagus, green beans, kale, onions,
+                          peppers, and etc.
+                        </FoodExpiringModal>
                         <div>
                           <button
                             type="button"
@@ -261,13 +247,15 @@ export const FoodExpiring = () => {
                   <div className="modal-dialog">
                     <div className="modal-content">
                       <div className="modal-body">
-                        <h2>What are Fruits?</h2>The consumption of fruit is not
-                        only essential for the health and maintenance of body
-                        but they actually make your skin look radiant, young and
-                        glowing as fruits are full of anti-oxidants. Examples of
-                        fruit are strawberries, watermelon, pineapples, all
-                        types of berries, oranges, grapes, apples, kiwi, and
-                        etc.
+                        <FoodExpiringModal modalid="fruitsmodal">
+                          <h2>What are Fruits?</h2>The consumption of fruit is
+                          not only essential for the health and maintenance of
+                          body but they actually make your skin look radiant,
+                          young and glowing as fruits are full of anti-oxidants.
+                          Examples of fruit are strawberries, watermelon,
+                          pineapples, all types of berries, oranges, grapes,
+                          apples, kiwi, and etc.
+                        </FoodExpiringModal>
                         <div>
                           <button
                             type="button"

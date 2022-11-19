@@ -4,6 +4,18 @@ body{
 .verticalSpan {
   min-height: 83%;
 }
+.verticalSpan::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://raw.githubusercontent.com/michellebessa/meal-plan-final-project/382043667daab97dd4e7b02791b085fa3d877d49/src/front/img/project-pic.jpg');
+  background-size: cover;
+  z-index: -100;
+  filter: saturate(125%) blur(5px);
+}
 .navbar-brand {
   color: black;
   font-family:cursive;

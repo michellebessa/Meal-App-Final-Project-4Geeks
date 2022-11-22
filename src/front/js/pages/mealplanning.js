@@ -1,32 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
+import {WeekDay, DailyMealPlanning} from "./codecleaner.js"
 
-const DailyMealPlanning = (props) => {
-  return (
-    <div className="accordion-item">
-      <h2 className="accordion-header" id={props.mealid + "header"}>
-        <button
-          className="accordion-button"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target={`#${props.mealid}-toggle`}
-          aria-expanded="true"
-          aria-controls="panelsStayOpen-collapseOne"
-        >
-          {props.mealid}
-        </button>
-      </h2>
-      <div
-        id={`${props.mealid}-toggle`}
-        className="accordion-collapse collapse show panelsStayOpen"
-        aria-labelledby={props.mealid}
-      >
-        <div className="accordion-body">{props.children}</div>
-      </div>
-    </div>
-  );
-};
 
 export const MealPlanning = () => {
   const { store, actions } = useContext(Context);
@@ -48,48 +24,26 @@ export const MealPlanning = () => {
                   Select Week Day
                 </button>
                 <ul className="dropdown-menu">
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Monday
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Tuesday
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Wednesday
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Thursday
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Friday
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Saturday
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Sunday
-                    </a>
-                  </li>
+                  <WeekDay day="Monday" />
+                  <WeekDay day="Tuesday" />
+                  <WeekDay day="Wednesday" />
+                  <WeekDay day="Thursday" />
+                  <WeekDay day="Friday" />
+                  <WeekDay day="Saturday" />
+                  <WeekDay day="Sunday" />
                 </ul>
               </div>
             </p>
             <div className="accordion" id="accordionPanelsStayOpenExample">
-              <DailyMealPlanning mealid="Breakfast"></DailyMealPlanning>
-              <DailyMealPlanning mealid="Lunch"></DailyMealPlanning>
-              <DailyMealPlanning mealid="Dinner"></DailyMealPlanning>
+              <DailyMealPlanning mealid="Breakfast">
+                Early Meal of the day
+              </DailyMealPlanning>
+              <DailyMealPlanning mealid="Lunch">
+                Middle Meal of the day
+              </DailyMealPlanning>
+              <DailyMealPlanning mealid="Dinner">
+                Final Meal of the day
+              </DailyMealPlanning>
             </div>
           </li>
         </div>
@@ -97,7 +51,6 @@ export const MealPlanning = () => {
           <li className="list-group-item" id="mealplanning">
             <h1>Shopping List</h1>
             <p>
-              {" "}
               <div className="dropdown">
                 <button
                   className="btn btn-secondary dropdown-toggle"
@@ -108,41 +61,13 @@ export const MealPlanning = () => {
                   Select Week Day
                 </button>
                 <ul className="dropdown-menu">
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Monday
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Tuesday
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Wednesday
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Thursday
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Friday
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Saturday
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Sunday
-                    </a>
-                  </li>
+                  <WeekDay day="Monday" />
+                  <WeekDay day="Tuesday" />
+                  <WeekDay day="Wednesday" />
+                  <WeekDay day="Thursday" />
+                  <WeekDay day="Friday" />
+                  <WeekDay day="Saturday" />
+                  <WeekDay day="Sunday" />
                 </ul>
               </div>
             </p>

@@ -16,7 +16,7 @@ export const Navbar = () => {
         </Link>
 
         <Link to="/mealplanning">
-        <span className="navbar-brand mb-0 h1">Shopping list</span>
+        <span className="navbar-brand mb-0 h1">Meal Planner/Shopping list</span>
         </Link>
 
         <Link to="/pantryscan">

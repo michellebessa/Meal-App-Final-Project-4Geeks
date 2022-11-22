@@ -8,94 +8,92 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('https://raw.githubusercontent.com/michellebessa/meal-plan-final-project/382043667daab97dd4e7b02791b085fa3d877d49/src/front/img/project-pic.jpg');
+  background: url("https://raw.githubusercontent.com/michellebessa/meal-plan-final-project/382043667daab97dd4e7b02791b085fa3d877d49/src/front/img/project-pic.jpg");
   background-size: cover;
   z-index: -100;
   filter: saturate(125%) blur(5px);
 }
 .navbar-brand {
   color: black;
-  font-family:cursive;
+  font-family: cursive;
 }
-.navbar{
-  background-color: #AA8B56;
+.navbar {
+  background-color: #aa8b56;
 }
-.footer{
-  background-color: #AA8B56;
+.footer {
+  background-color: #aa8b56;
 }
-.float-start {
-  width: 50%;
-  margin: auto;
+.btn {
+  padding: 0px;
 }
-.btn{
-    padding:0px;
+.fas {
+  font-size: 25px;
+  color: #c5d8a4;
+  width: 30px;
 }
-.fas{
-    font-size:25px;
-    color:#C5D8A4;
-    width:30px;
+span {
+  margin-left: 40%;
 }
-span{
-    margin-left:40%;
+.buttonfooter {
+  margin-left: 5%;
+  float: right;
 }
-.buttonfooter{
-    margin-left:5%;
-    float:right;
+.footer {
+  height: 6%;
 }
-.footer{
-    height:6%;
-}
-.expiration1{
+.expiration1 {
   border: 1px solid black;
-  margin-top:5%;
-  margin-bottom:5%;
-  text-align:center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
 }
-.expiration2{
-  /* border: 1px solid black; */
-  text-align:center;
-  border-top:1px solid black;
+.expiration2 {
+  text-align: center;
+  border-top: 1px solid black;
 }
-img{
-  width:300px;
-  border-radius:50%;
+img {
+  width: 300px;
+  border-radius: 50%;
 }
-.list-group-item{
-  border:0px;
-  margin-bottom:10px;
-  background: rgb(245, 245, 244, 0.50);
+#foodexpiring {
+  border: 0px;
+  margin-bottom: 10px;
+  border-radius:10%;
+  background-color: rgb(245, 245, 244, 0.5);
 }
-.btn{
-  background-color: #AA8B56;
-  margin-left:5px;
-  margin-top:5px;
-  font-family:cursive;
+.btn {
+  background-color: #aa8b56;
+  margin-left: 5px;
+  margin-top: 5px;
+  font-family: cursive;
 }
-h1{
-  color: #AA8B56;
-  font-family:cursive;
+h1 {
+  color: #aa8b56;
+  font-family: cursive;
 }
-h2{
-  color: #AA8B56;
-  font-family:cursive;
+h2 {
+  color: #aa8b56;
+  font-family: cursive;
 }
-.foodexptitle{
-  text-align:center;
-  font-family:cursive;
-  margin-top:10px;
-  color: #224B0C;
-}
-.foodexptitleimg{
-  border-radius:0px;
-}
-.float-end{
-  border-radius:0px;
-  width:40%;
-}
-#mealplanning{
+#mealplanning {
   background-color: whitesmoke;
-  width:60%;
-  margin:auto;
-  text-align:center;
+  width: 60%;
+  margin: auto;
+  text-align: center;
 }
-
+.homedescription {
+  text-align: center;
+  font-family: cursive;
+  margin-top: 10px;
+  color: #224b0c;
+  background-color: rgb(245, 245, 244, 0.5);
+  width: 50%;
+  margin-left:25%;
+  margin-bottom:3%;
+}
+#imghome{
+  border-radius:0px;
+  width:50%;
+  margin-left:25%;
+  margin-top:3%;
+}

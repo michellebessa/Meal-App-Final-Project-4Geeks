@@ -29,12 +29,12 @@ export const FoodExpiring = () => {
     <div className="container">
       <div className="expiration2">
         <h1>
-          <strong>Daily Food Pyramid</strong>
+          <strong>Food Categories</strong>
         </h1>
         <div className="container text-center">
           <div className="row">
             <div className="col">
-              <li className="list-group-item">
+              <li className="list-group-item" id="foodexpiring">
                 <h2>Healthy Fat</h2>
                 <img src="https://palm.southbeachdiet.com/wp-content/uploads/2018/12/hero-3-800x585.jpg" />
                 <button
@@ -43,10 +43,10 @@ export const FoodExpiring = () => {
                   data-bs-toggle="modal"
                   data-bs-target="#fatmodal"
                 >
-                  <i class="fas fa-utensils"></i> Learn More
+                  <i className="fas fa-utensils"></i> Learn More
                 </button>
                 <button type="button" className="btn">
-                  <i class="fas fa-plus"></i>Add item to list
+                  <i className="fas fa-plus"></i>Add item to list
                 </button>
 
                 <FoodExpiringModal modalid="fatmodal">
@@ -62,7 +62,7 @@ export const FoodExpiring = () => {
             </div>
 
             <div className="col">
-              <li className="list-group-item">
+              <li className="list-group-item" id="foodexpiring">
                 <h2>Protein</h2>
                 <img src="https://i.insider.com/62855ef90fdb180018cc0e15?width=700" />
                 <button
@@ -71,10 +71,10 @@ export const FoodExpiring = () => {
                   data-bs-toggle="modal"
                   data-bs-target="#proteinmodal"
                 >
-                  <i class="fas fa-utensils"></i> Learn More
+                  <i className="fas fa-utensils"></i> Learn More
                 </button>
                 <button type="button" className="btn">
-                  <i class="fas fa-plus"></i>Add item to list
+                  <i className="fas fa-plus"></i>Add item to list
                 </button>
 
                 <FoodExpiringModal modalid="proteinmodal">
@@ -97,7 +97,7 @@ export const FoodExpiring = () => {
             </div>
 
             <div className="col">
-              <li className="list-group-item">
+              <li className="list-group-item" id="foodexpiring">
                 <h2>Dairy</h2>
                 <img src="https://news.sanfordhealth.org/wp-content/uploads/2020/06/Dairy-products.jpg" />
                 <button
@@ -106,10 +106,10 @@ export const FoodExpiring = () => {
                   data-bs-toggle="modal"
                   data-bs-target="#dairymodal"
                 >
-                  <i class="fas fa-utensils"></i> Learn More
+                  <i className="fas fa-utensils"></i> Learn More
                 </button>
                 <button type="button" className="btn">
-                  <i class="fas fa-plus"></i>Add item to list
+                  <i className="fas fa-plus"></i>Add item to list
                 </button>
 
                 <FoodExpiringModal modalid="dairymodal">
@@ -128,7 +128,7 @@ export const FoodExpiring = () => {
         <div className="container text-center">
         <div className="row">
           <div className="col">
-            <li className="list-group-item">
+            <li className="list-group-item" id="foodexpiring">
               <h2>Grains/Carbohydrates</h2>
               <img src="https://www.whitneyerd.com/wp-content/uploads/2020/04/whole-grains.jpg" />
               <button
@@ -137,10 +137,10 @@ export const FoodExpiring = () => {
                 data-bs-toggle="modal"
                 data-bs-target="#grainscarbohydratesmodal"
               >
-                <i class="fas fa-utensils"></i> Learn More
+                <i className="fas fa-utensils"></i> Learn More
               </button>
               <button type="button" className="btn">
-                <i class="fas fa-plus"></i> Add item to list
+                <i className="fas fa-plus"></i> Add item to list
               </button>
 
               <FoodExpiringModal modalid="grainscarbohydratesmodal">
@@ -158,7 +158,7 @@ export const FoodExpiring = () => {
           </div>
 
           <div className="col">
-            <li className="list-group-item">
+            <li className="list-group-item" id="foodexpiring">
               <h2>Vegetables</h2>
               <img src="https://imgk.timesnownews.com/story/vegetables_1.jpg?tr=w-1200,h-900" />
               <button
@@ -170,7 +170,7 @@ export const FoodExpiring = () => {
                 <i class="fas fa-utensils"></i> Learn More
               </button>
               <button type="button" className="btn">
-                <i class="fas fa-plus"></i> Add item to list
+                <i className="fas fa-plus"></i> Add item to list
               </button>
 
               <FoodExpiringModal modalid="vegetablesmodal">
@@ -187,7 +187,7 @@ export const FoodExpiring = () => {
           </div>
 
           <div className="col">
-            <li className="list-group-item">
+            <li className="list-group-item" id="foodexpiring">
               <h2>Fruits</h2>
               <img src="https://www.canr.msu.edu/contentAsset/image/4b2b7b46-dfcc-43f6-b7ce-3297d288c1df/fileAsset/filter/Resize,Jpeg/resize_w/750/jpeg_q/80" />
               <button
@@ -196,10 +196,10 @@ export const FoodExpiring = () => {
                 data-bs-toggle="modal"
                 data-bs-target="#fruitsmodal"
               >
-                <i class="fas fa-utensils"></i> Learn More
+                <i className="fas fa-utensils"></i> Learn More
               </button>
               <button type="button" className="btn">
-                <i class="fas fa-plus"></i> Add item to list
+                <i className="fas fa-plus"></i> Add item to list
               </button>
 
               <FoodExpiringModal modalid="fruitsmodal">

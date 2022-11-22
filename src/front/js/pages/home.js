@@ -8,37 +8,31 @@ export const Home = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <div className="mt-5">
-      <div className="float-container">
-        <div className="float-start ms-5 mt-5">
-          <p>
-            <div className="foodexptitle">
-              <h3>
-                <p>
-                  Our goal is to help you organize your food items so you stop
-                  wasting it, and organize your meals schedule.
-                </p>
-                <p>
-                  Do it easily by following the categories from the{" "}
-                  <strong>Food Pyramid!</strong>
-                </p>
-                <p>
-                  What does <strong>Food Pyramid</strong> means?
-                </p>
-                <p>Click here to learn more!</p>
-              </h3>
-
-              <div></div>
-            </div>
-          </p>
-        </div>
-        <div>
-          <img
-            className="float-end me-5 mt-5"
-            src="https://miro.medium.com/max/1200/1*hWWewefMOsKjve8b6O6Egw.jpeg"
-          />
+      <div className="row">
+        <div className="col">
+          <div className="imghome">
+            <img
+              id="imghome"
+              src="https://miro.medium.com/max/1200/1*hWWewefMOsKjve8b6O6Egw.jpeg"
+            />
+          </div>
+          <div className="homedescription">
+            <h3>
+            <p className="hometitle">Our main goal is to stop food waste!</p>
+              <p>
+                {" "}
+                To achieve this, we will help your organize your food items at
+                home. That will not only help you decrease food waste, but will
+                make your life much easier, once you will know what items you
+                need to shop.
+              </p>
+              <p>
+                How do we help you organize your food items? A practical way is by
+                separating your food items by food categories.
+              </p>
+            </h3>
+          </div>
         </div>
       </div>
-    </div>
   );
 };

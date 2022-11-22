@@ -35,8 +35,57 @@ export const MealPlanning = () => {
     <div className="mt-5">
       <div className="row">
         <div className="col">
-          <li class="list-group-item" id="mealplanning">
+          <li className="list-group-item" id="mealplanning">
             <h1>Daily Meal Planner</h1>
+            <p>
+              <div className="dropdown">
+                <button
+                  className="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Select Week Day
+                </button>
+                <ul className="dropdown-menu">
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Monday
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Tuesday
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Wednesday
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Thursday
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Friday
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Saturday
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Sunday
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </p>
             <div className="accordion" id="accordionPanelsStayOpenExample">
               <DailyMealPlanning mealid="Breakfast"></DailyMealPlanning>
               <DailyMealPlanning mealid="Lunch"></DailyMealPlanning>
@@ -47,6 +96,56 @@ export const MealPlanning = () => {
         <div className="col">
           <li className="list-group-item" id="mealplanning">
             <h1>Shopping List</h1>
+            <p>
+              {" "}
+              <div className="dropdown">
+                <button
+                  className="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Select Week Day
+                </button>
+                <ul className="dropdown-menu">
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Monday
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Tuesday
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Wednesday
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Thursday
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Friday
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Saturday
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Sunday
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </p>
             <div className="accordion" id="accordionPanelsStayOpenExample">
               <DailyMealPlanning mealid="Healthy-Fat"></DailyMealPlanning>
               <DailyMealPlanning mealid="Protein"></DailyMealPlanning>

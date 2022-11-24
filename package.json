@@ -77,6 +77,7 @@
 		"react": "^16.8.4",
 		"react-dom": "^16.8.4",
 		"react-polyfills": "0.0.1",
+		"react-qr-barcode-scanner": "^1.0.6",
 		"react-router-dom": "^6.3.0"
 	}
 }

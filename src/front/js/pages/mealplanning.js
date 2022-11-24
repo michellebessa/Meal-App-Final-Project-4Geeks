@@ -37,7 +37,7 @@ export const MealPlanning = () => {
             </p>
             <div className="accordion" id="accordionPanelsStayOpenExample">
               <DailyMealPlanning mealid="Breakfast">
-
+              <DailyMeal></DailyMeal>
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Lunch">
               <input className="inputmealplanner" placeholder="What are you having for lunch?"></input>

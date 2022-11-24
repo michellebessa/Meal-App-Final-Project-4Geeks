@@ -15,7 +15,7 @@
 }
 .navbar-brand {
   color: black;
-  font-family: cursive;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .navbar {
   background-color: #aa8b56;
@@ -58,7 +58,7 @@ img {
 #foodexpiring {
   border: 0px;
   margin-bottom: 10px;
-  border-radius:10%;
+  border-radius: 10%;
   background-color: rgb(245, 245, 244, 0.5);
   text-shadow: 2px 2px 5px black;
 }
@@ -66,15 +66,15 @@ img {
   background-color: #aa8b56;
   margin-left: 5px;
   margin-top: 5px;
-  font-family: cursive;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 h1 {
   color: #aa8b56;
-  font-family: cursive;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 h2 {
   color: #aa8b56;
-  font-family: cursive;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 #mealplanning {
   background-color: whitesmoke;
@@ -84,21 +84,21 @@ h2 {
 }
 .homedescription {
   text-align: center;
-  font-family: cursive;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin-top: 10px;
   color: #224b0c;
   background-color: rgb(245, 245, 244, 0.5);
   width: 50%;
-  margin-left:25%;
-  margin-bottom:3%;
+  margin-left: 25%;
+  margin-bottom: 3%;
 }
-#imghome{
-  border-radius:0px;
-  width:50%;
-  margin-left:25%;
-  margin-top:3%;
+#imghome {
+  border-radius: 0px;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 3%;
 }
-.inputmealplanner{
-  width:100%;
-  text-align:center;
+.inputmealplanner {
+  width: 100%;
+  text-align: center;
 }

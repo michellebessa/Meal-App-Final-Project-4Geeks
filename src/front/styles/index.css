@@ -15,7 +15,7 @@
 }
 .navbar-brand {
   color: black;
-  font-family: cursive;
+  font-family: cursive;   text-shadow:  2px 2px 5px whitesmoke;
 }
 .navbar {
   background-color: #aa8b56;
@@ -66,14 +66,17 @@ img {
   margin-left: 5px;
   margin-top: 5px;
   font-family: cursive;
+  text-shadow:  2px 2px 5px black;
 }
 h1 {
   color: #aa8b56;
   font-family: cursive;
+  text-shadow:  2px 2px 5px black;
 }
 h2 {
   color: #aa8b56;
   font-family: cursive;
+  text-shadow:  2px 2px 5px black;
 }
 #mealplanning {
   background-color: whitesmoke;

@@ -60,6 +60,7 @@ img {
   margin-bottom: 10px;
   border-radius:10%;
   background-color: rgb(245, 245, 244, 0.5);
+  text-shadow: 2px 2px 5px black;
 }
 .btn {
   background-color: #aa8b56;
@@ -96,4 +97,8 @@ h2 {
   width:50%;
   margin-left:25%;
   margin-top:3%;
+}
+.inputmealplanner{
+  width:100%;
+  text-align:center;
 }

@@ -60,7 +60,6 @@ img {
   margin-bottom: 10px;
   border-radius: 10%;
   background-color: rgb(245, 245, 244, 0.5);
-  text-shadow: 2px 2px 5px black;
 }
 .btn {
   background-color: #aa8b56;
@@ -75,6 +74,7 @@ h1 {
 h2 {
   color: #aa8b56;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-shadow: 2px 2px 5px black;
 }
 #mealplanning {
   background-color: whitesmoke;
@@ -102,3 +102,39 @@ h2 {
   width: 100%;
   text-align: center;
 }
+.contactus{
+  border:1px solid black;
+  margin-left:15%;
+  margin-right:15%;
+  margin-top:10%;
+  background-color: #2b4e1b;
+}
+.contactus2{
+  margin-left:15%;
+  margin-right:15%;
+  text-align:center;
+  color:white;
+}
+.contactus3{
+  color:white;
+}
+.col-md-6{
+ margin-left:10%;
+}
+.col-md-12{
+  margin-left:10%;
+  width:60%;
+  color:white;
+}
+.list-unstyled{
+  margin:auto;
+}
+.contactusinfo{
+  color:white;
+  padding:0px;
+}
+.contactusbtn{
+  width:10%;
+  margin-left:35%;
+}
+

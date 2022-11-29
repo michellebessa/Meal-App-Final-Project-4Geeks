@@ -5,6 +5,12 @@ import {WeekDay, DailyMealPlanning} from "./codecleaner.js"
 import {DailyMeal} from "./list.js"
 
 
+// const handleKeyPress (e) => { 
+//   if(e.key=="Enter")
+//   { creatingToDos(userEntry) } 
+// }
+
+
 export const MealPlanning = () => {
   const { store, actions } = useContext(Context);
 
@@ -37,7 +43,7 @@ export const MealPlanning = () => {
             </p>
             <div className="accordion" id="accordionPanelsStayOpenExample">
               <DailyMealPlanning mealid="Breakfast">
-              <DailyMeal></DailyMeal>
+              <input className="inputmealplanner" placeholder="What are you having for breakfast?"></input>
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Lunch">
               <input className="inputmealplanner" placeholder="What are you having for lunch?"></input>

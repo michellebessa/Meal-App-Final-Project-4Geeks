@@ -27,8 +27,8 @@ export const Navbar = () => {
         <span className="navbar-brand mb-0 h1">Recipes</span>
         </Link>
 
-        <Link to="/">
-        <span className="navbar-brand mb-0 h1">About us</span>
+        <Link to="/contactus">
+        <span className="navbar-brand mb-0 h1">Contact Us</span>
         </Link>
       </div>
     </nav>

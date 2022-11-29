@@ -1,15 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
-import {WeekDay, DailyMealPlanning} from "./codecleaner.js"
-import {DailyMeal} from "./list.js"
-
-
-// const handleKeyPress (e) => { 
-//   if(e.key=="Enter")
-//   { creatingToDos(userEntry) } 
-// }
-
+import { WeekDay, DailyMealPlanning } from "./codecleaner.js";
+import { DailyMeal } from "./list.js";
 
 export const MealPlanning = () => {
   const { store, actions } = useContext(Context);
@@ -43,13 +36,22 @@ export const MealPlanning = () => {
             </p>
             <div className="accordion" id="accordionPanelsStayOpenExample">
               <DailyMealPlanning mealid="Breakfast">
-              <input className="inputmealplanner" placeholder="What are you having for breakfast?"></input>
+                <input
+                  className="inputmealplanner"
+                  placeholder="What are you having for breakfast?"
+                ></input>
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Lunch">
-              <input className="inputmealplanner" placeholder="What are you having for lunch?"></input>
+                <input
+                  className="inputmealplanner"
+                  placeholder="What are you having for lunch?"
+                ></input>
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Dinner">
-              <input className="inputmealplanner" placeholder="What are you having for dinner?"></input>
+                <input
+                  className="inputmealplanner"
+                  placeholder="What are you having for dinner?"
+                ></input>
               </DailyMealPlanning>
             </div>
           </li>
@@ -79,12 +81,42 @@ export const MealPlanning = () => {
               </div>
             </p>
             <div className="accordion" id="accordionPanelsStayOpenExample">
-              <DailyMealPlanning mealid="Healthy-Fat"><input className="inputmealplanner" placeholder="Add an item to your list"></input></DailyMealPlanning>
-              <DailyMealPlanning mealid="Protein"><input className="inputmealplanner" placeholder="Add an item to your list"></input></DailyMealPlanning>
-              <DailyMealPlanning mealid="Dairy"><input className="inputmealplanner" placeholder="Add an item to your list"></input></DailyMealPlanning>
-              <DailyMealPlanning mealid="Grains-Carbohydrates"><input className="inputmealplanner" placeholder="Add an item to your list"></input></DailyMealPlanning>
-              <DailyMealPlanning mealid="Vegetables"><input className="inputmealplanner" placeholder="Add an item to your list"></input></DailyMealPlanning>
-              <DailyMealPlanning mealid="Fruits"><input className="inputmealplanner" placeholder="Add an item to your list"></input></DailyMealPlanning>
+              <DailyMealPlanning mealid="Healthy-Fat">
+                <input
+                  className="inputmealplanner"
+                  placeholder="Add an item to your list"
+                ></input>
+              </DailyMealPlanning>
+              <DailyMealPlanning mealid="Protein">
+                <input
+                  className="inputmealplanner"
+                  placeholder="Add an item to your list"
+                ></input>
+              </DailyMealPlanning>
+              <DailyMealPlanning mealid="Dairy">
+                <input
+                  className="inputmealplanner"
+                  placeholder="Add an item to your list"
+                ></input>
+              </DailyMealPlanning>
+              <DailyMealPlanning mealid="Grains-Carbohydrates">
+                <input
+                  className="inputmealplanner"
+                  placeholder="Add an item to your list"
+                ></input>
+              </DailyMealPlanning>
+              <DailyMealPlanning mealid="Vegetables">
+                <input
+                  className="inputmealplanner"
+                  placeholder="Add an item to your list"
+                ></input>
+              </DailyMealPlanning>
+              <DailyMealPlanning mealid="Fruits">
+                <input
+                  className="inputmealplanner"
+                  placeholder="Add an item to your list"
+                ></input>
+              </DailyMealPlanning>
             </div>
           </li>
         </div>

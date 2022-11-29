@@ -90,8 +90,16 @@ h2 {
   background-color: rgb(245, 245, 244, 0.5);
   width: 50%;
   margin-left: 25%;
-  margin-bottom: 3%;
 }
+.homedescription2 {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.hometitle {
+  margin-top: 5%;
+  padding-top: 10px;
+}
+
 #imghome {
   border-radius: 0px;
   width: 50%;
@@ -102,39 +110,41 @@ h2 {
   width: 100%;
   text-align: center;
 }
-.contactus{
-  border:1px solid black;
-  margin-left:15%;
-  margin-right:15%;
-  margin-top:10%;
+.contactus {
+  border: 1px solid black;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 5%;
   background-color: #2b4e1b;
 }
-.contactus2{
-  margin-left:15%;
-  margin-right:15%;
-  text-align:center;
-  color:white;
+.contactus2 {
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: center;
+  color: white;
 }
-.contactus3{
-  color:white;
+.contactus3 {
+  color: white;
 }
-.col-md-6{
- margin-left:10%;
+.contactustittle {
+  margin-top: 3%;
 }
-.col-md-12{
-  margin-left:10%;
-  width:60%;
-  color:white;
+.col-md-6 {
+  margin-left: 10%;
 }
-.list-unstyled{
-  margin:auto;
+.col-md-12 {
+  margin-left: 10%;
+  width: 60%;
+  color: white;
 }
-.contactusinfo{
-  color:white;
-  padding:0px;
+.list-unstyled {
+  margin: auto;
 }
-.contactusbtn{
-  width:10%;
-  margin-left:35%;
+.contactusinfo {
+  color: white;
+  padding: 0px;
 }
-
+.contactusbtn {
+  width: 10%;
+  margin-left: 35%;
+}

@@ -21,7 +21,7 @@ export const Home = () => {
         <div className="homedescription">
           <h3>
             <p className="hometitle">Our main goal is to stop food waste!</p>
-            <p>
+            <p className="homedescription2">
               {" "}
               To achieve this, we will help your organize your food items at
               home. That will not only help you decrease food waste, but will

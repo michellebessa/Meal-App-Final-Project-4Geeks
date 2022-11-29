@@ -8,7 +8,7 @@ export const ContactUs = () => {
 
   return (
     <section className="contactus">
-      <h2 className="h1-responsive font-weight-bold text-center my-4">
+      <h2 className="contactustittle text-center">
         Contact us
       </h2>
 

@@ -8,9 +8,7 @@ export const ContactUs = () => {
 
   return (
     <section className="contactus">
-      <h2 className="contactustittle text-center">
-        Contact us
-      </h2>
+      <h2 className="contactustittle text-center">Contact us</h2>
 
       <p className="contactus2">
         Do you have any questions? Please do not hesitate to contact us
@@ -102,15 +100,15 @@ export const ContactUs = () => {
         <div className="contactusinfo col-md-3 text-center">
           <ul className="list-unstyled">
             <li>
-              <i className="contactus4 fas fa-map-marker-alt fa-2x"/>
-              <p>Homestead, FL 33032, USA</p>
+              <i className="contactus4 fas fa-map-marker-alt fa-2x" />
               <p>Miami Beach, FL 33139, USA</p>
-              <p>West Palm Beach, FL 33401, USA</p>
+              <p>Homestead, FL 33032, USA</p>
               <p>Burleson, TX 76028, USA</p>
+              <p>West Palm Beach, FL 33401, USA</p>
             </li>
 
             <li>
-              <i className="contactus4 fas fa-envelope mt-4 fa-2x"/>
+              <i className="contactus4 fas fa-envelope mt-4 fa-2x" />
               <p>mealplanner@gmail.com</p>
             </li>
           </ul>

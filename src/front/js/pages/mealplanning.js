@@ -2,10 +2,32 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { WeekDay, DailyMealPlanning } from "./codecleaner.js";
-import { DailyMeal } from "./list.js";
 
 export const MealPlanning = () => {
   const { store, actions } = useContext(Context);
+
+  const [breakfast, setBreakfast] = useState([]);
+  const [breakfastInput, setBreakfastInput] = useState("");
+  const [lunch, setLunch] = useState([]);
+  const [lunchInput, setLunchInput] = useState("");
+  const [dinner, setDinner] = useState([]);
+  const [dinnerInput, setDinnerInput] = useState("");
+
+  const handleSubmit = (event, meal) => {
+    if (meal == "breakfast" && breakfastInput) {
+      setBreakfast([...breakfast, breakfastInput]);
+      setBreakfastInput("");
+      console.table(breakfast);
+    } else if (meal == "lunch" && lunchInput) {
+      setLunch([...lunch, lunchInput]);
+      setLunchInput("");
+      console.table(lunch);
+    } else if (meal == "dinner" && dinnerInput) {
+      setDinner([...dinner, dinnerInput]);
+      setDinnerInput("");
+      console.table(dinner);
+    }
+  };
 
   return (
     <div className="mt-5">
@@ -36,18 +58,55 @@ export const MealPlanning = () => {
             </p>
             <div className="accordion" id="accordionPanelsStayOpenExample">
               <DailyMealPlanning mealid="Breakfast">
-                <input
-                  className="inputmealplanner"
-                  placeholder="What are you having for breakfast?"
-                ></input>
+                <form
+                  onSubmit={(event) => {
+                    event.preventDefault();
+                    handleSubmit(event, "breakfast");
+                  }}
+                >
+                  <input
+                    className="inputmealplanner"
+                    placeholder="What are you having for breakfast?"
+                    value={breakfastInput}
+                    onChange={(event) => {
+                      setBreakfastInput(event.target.value);
+                    }}
+                  ></input>
+                </form>
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Lunch">
-                <input
-                  className="inputmealplanner"
-                  placeholder="What are you having for lunch?"
-                ></input>
+                <form
+                  onSubmit={(event) => {
+                    event.preventDefault();
+                    handleSubmit(event, "lunch");
+                  }}
+                >
+                  <input
+                    className="inputmealplanner"
+                    placeholder="What are you having for lunch?"
+                    value={lunchInput}
+                    onChange={(event) => {
+                      setLunchInput(event.target.value);
+                    }}
+                  ></input>
+                </form>
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Dinner">
+                <form
+                  onSubmit={(event) => {
+                    event.preventDefault();
+                    handleSubmit(event, "dinner");
+                  }}
+                >
+                  <input
+                    className="inputmealplanner"
+                    placeholder="What are you having for dinner?"
+                    value={dinnerInput}
+                    onChange={(event) => {
+                      setDinnerInput(event.target.value);
+                    }}
+                  ></input>
+                </form>
                 <input
                   className="inputmealplanner"
                   placeholder="What are you having for dinner?"

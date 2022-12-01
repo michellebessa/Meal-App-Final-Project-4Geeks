@@ -4,18 +4,21 @@ import { Context } from "../store/appContext";
 import { WeekDay, DailyMealPlanning } from "./codecleaner.js";
 
 export const Recipes = () => {
-	const { store, actions } = useContext(Context);
+  const { store, actions } = useContext(Context);
 
-	return (
-		<div className="mt-5">
+  return (
+    <div className="mt-5">
       <div className="row">
         <div className="col">
           <li className="list-group-item" id="mealplanning">
             <h1>Recipes</h1>
-            <p>
-            </p>
+            <p></p>
             <div className="accordion" id="accordionPanelsStayOpenExample">
-              <DailyMealPlanning mealid="Maintenance Recipes">
+              <DailyMealPlanning mealid="Maintenance">
+                <input
+                  className="inputmealplanner"
+                  placeholder="Add an item to your list"
+                ></input>
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Bulk/Surplus">
                 <input
@@ -52,7 +55,5 @@ export const Recipes = () => {
         </div>
       </div>
     </div>
-	);
-
-}
-	
+  );
+};

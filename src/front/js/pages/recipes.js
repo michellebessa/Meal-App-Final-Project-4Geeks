@@ -3,6 +3,17 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { WeekDay, DailyMealPlanning } from "./codecleaner.js";
 
+const RecipesButtonModal = () => {
+  <button
+    type="button"
+    className="btn"
+    data-bs-toggle="modal"
+    data-bs-target="#"
+  >
+    <i className="fas fa-utensils"></i> Learn More
+  </button>;
+};
+
 export const Recipes = () => {
   const { store, actions } = useContext(Context);
 
@@ -10,15 +21,29 @@ export const Recipes = () => {
     <div className="mt-5">
       <div className="row">
         <div className="col">
-          <li className="list-group-item" id="mealplanning">
+          <li className="list-group-item" id="recipes">
             <h1>Recipes</h1>
             <p></p>
             <div className="accordion" id="accordionPanelsStayOpenExample">
               <DailyMealPlanning mealid="Maintenance">
-                <input
-                  className="inputmealplanner"
-                  placeholder="Add an item to your list"
-                ></input>
+                <row>
+                  <button
+                    type="button"
+                    className="btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#"
+                  >
+                    <i className="fas fa-utensils"></i> Learn More
+                  </button>
+                  <button type="button" className="btn">
+                    <i className="fas fa-plus" id="recipesicon"></i>Add recipe
+                    to list
+                  </button>
+                  <button type="button" className="btn">
+                    <i className="fas fa-plus" id="recipesicon"></i>Types of
+                    Cuisine
+                  </button>
+                </row>
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Bulk/Surplus">
                 <input

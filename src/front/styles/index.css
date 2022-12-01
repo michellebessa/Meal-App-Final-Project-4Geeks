@@ -76,7 +76,7 @@ h2 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-shadow: 2px 2px 5px black;
 }
-#mealplanning {
+#mealplanning, #recipes {
   background-color: whitesmoke;
   width: 60%;
   margin: auto;
@@ -147,4 +147,7 @@ h2 {
 .contactusbtn {
   width: 10%;
   margin-left: 35%;
+}
+#recipesicon{
+  padding-top:0px;
 }

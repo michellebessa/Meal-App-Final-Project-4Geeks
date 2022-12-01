@@ -14,18 +14,20 @@ export const MealPlanning = () => {
   const [dinnerInput, setDinnerInput] = useState("");
 
   const handleSubmit = (event, meal) => {
+    if (event.keyCode == 13) {
+      setBreakfast([...breakfast, breakfastInput]);
+      setLunch([...lunch, lunchInput]);
+      setDinner([...dinner, dinnerInput]);
+    }
     if (meal == "breakfast" && breakfastInput) {
       setBreakfast([...breakfast, breakfastInput]);
       setBreakfastInput("");
-      console.table(breakfast);
     } else if (meal == "lunch" && lunchInput) {
       setLunch([...lunch, lunchInput]);
       setLunchInput("");
-      console.table(lunch);
     } else if (meal == "dinner" && dinnerInput) {
       setDinner([...dinner, dinnerInput]);
       setDinnerInput("");
-      console.table(dinner);
     }
   };
 
@@ -72,7 +74,16 @@ export const MealPlanning = () => {
                       setBreakfastInput(event.target.value);
                     }}
                   ></input>
+                  {/*this button is for sending an item to the array list */}
+                  {/* <button onClick={handleSubmit("breakfast")}>Test</button> */} 
                 </form>
+                {breakfast.map((meal) => {
+                  return (
+                    <ul>
+                      <li>{meal}</li>
+                    </ul>
+                  );
+                })}
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Lunch">
                 <form
@@ -90,6 +101,13 @@ export const MealPlanning = () => {
                     }}
                   ></input>
                 </form>
+                {lunch.map((meal) => {
+                  return (
+                    <ul>
+                      <li>{meal}</li>
+                    </ul>
+                  );
+                })}
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Dinner">
                 <form
@@ -107,10 +125,13 @@ export const MealPlanning = () => {
                     }}
                   ></input>
                 </form>
-                <input
-                  className="inputmealplanner"
-                  placeholder="What are you having for dinner?"
-                ></input>
+                {dinner.map((meal) => {
+                  return (
+                    <ul>
+                      <li>{meal}</li>
+                    </ul>
+                  );
+                })}
               </DailyMealPlanning>
             </div>
           </li>

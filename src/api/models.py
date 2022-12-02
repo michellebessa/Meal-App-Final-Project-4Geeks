@@ -17,3 +17,23 @@ class User(db.Model):
             "email": self.email,
             # do not serialize the password, its a security breach
         }
+
+class Meal_planner(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    days_of_the_week = db.Column(db.String(120), unique=True, nullable=False)
+    breakfast = db.Column(db.String(80), unique=False, nullable=True)
+    lunch = db.Column(db.String(80), unique=False, nullable=True)
+    dinner = db.Column(db.String(80), unique=False, nullable=True) 
+
+    def __repr__(self):
+        return f'<Meal_planner {self.id}>'
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "days_of_the_week": self.days_of_the_week, 
+            "breakfast": self.breakfast,
+            "lunch": self.lunch,
+            "dinner": self.dinner,
+            # do not serialize the password, its a security breach
+        }

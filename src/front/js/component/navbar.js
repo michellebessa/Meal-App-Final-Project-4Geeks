@@ -9,13 +9,13 @@ export const Navbar = () => {
           <span className="navbar-brand mb-0 h1">Meal it!</span>
         </Link>
 
-        <Link to="/foodexpiring">
+        <Link to="/foodcategories">
 
         <span className="navbar-brand mb-0 h1">Food Categories</span>
 
         </Link>
 
-        <Link to="/mealplanning">
+        <Link to="/mealplannershopping">
         <span className="navbar-brand mb-0 h1">Meal Planner/Shopping list</span>
         </Link>
 

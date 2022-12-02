@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import pictureProjectUrl from "../../img/project-pic.jpg";
-import { FoodExpiring } from "./foodexpiring";
+import { FoodExpiring } from "./foodcategories";
 
 export const Home = () => {
   const { store, actions } = useContext(Context);

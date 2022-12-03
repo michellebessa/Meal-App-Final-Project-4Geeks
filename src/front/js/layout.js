@@ -11,7 +11,9 @@ import { MealPlannerShopping } from "./pages/mealplannershopping";
 import { PantryScan } from "./pages/pantryscan";
 import { Recipes } from "./pages/recipes";
 import { ContactUs } from "./pages/contactus";
+import { Login } from "./component/login";
 import { Footer } from "./component/footer";
+
 
 //create your first component
 const Layout = () => {
@@ -34,6 +36,7 @@ const Layout = () => {
               <Route element={<PantryScan />} path="/pantryscan" />
               <Route element={<Recipes />} path="/recipes" />
               <Route element={<ContactUs />} path="/contactus" />
+              <Route element={<Login />} path="/login" />
               <Route element={<h1>Not found!</h1>} />
             </Routes>
           </div>

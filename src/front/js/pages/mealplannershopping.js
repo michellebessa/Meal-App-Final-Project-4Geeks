@@ -212,10 +212,28 @@ export const MealPlannerShopping = () => {
             </p>
             <div className="accordion" id="accordionPanelsStayOpenExample">
               <DailyMealPlanning mealid="Healthy-Fat">
-                <input
-                  className="inputmealplanner"
-                  placeholder="Add an item to your list"
-                ></input>
+              <form
+                  onSubmit={(event) => {
+                    event.preventDefault();
+                    handleSubmit(event, "dinner");
+                  }}
+                >
+                  <input
+                    className="inputmealplanner"
+                    placeholder="Add an item to your list"
+                    value={dinnerInput}
+                    onChange={(event) => {
+                      setDinnerInput(event.target.value);
+                    }}
+                  ></input>
+                </form>
+                {dinner.map((meal) => {
+                  return (
+                    <ul className="m-0">
+                      <li id="mealmap">{meal}</li>
+                    </ul>
+                  );
+                })}
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Protein">
                 <input

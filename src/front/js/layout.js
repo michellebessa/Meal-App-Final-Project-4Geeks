@@ -12,6 +12,7 @@ import { PantryScan } from "./pages/pantryscan";
 import { Recipes } from "./pages/recipes";
 import { ContactUs } from "./pages/contactus";
 import { Login } from "./component/login";
+import { CreateAccount } from "./pages/createaccount";
 import { Footer } from "./component/footer";
 
 
@@ -37,6 +38,7 @@ const Layout = () => {
               <Route element={<Recipes />} path="/recipes" />
               <Route element={<ContactUs />} path="/contactus" />
               <Route element={<Login />} path="/login" />
+              <Route element={<CreateAccount />} path="/createaccount" />
               <Route element={<h1>Not found!</h1>} />
             </Routes>
           </div>

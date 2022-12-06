@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import { mealPlannerApi } from "../component/api";
 import { Context } from "../store/appContext";
 import { WeekDay, DailyMealPlanning } from "./codecleaner.js";
 
@@ -29,6 +30,17 @@ export const MealPlannerShopping = () => {
   const [vegetablesInput, setVegetablesInput] = useState("");
   const [fruits, setFruits] = useState([]);
   const [fruitsInput, setFruitsInput] = useState("");
+
+  const submitMeal = (breakfast1, lunch1, dinner1) => {
+    const data = {
+      days_of_the_week: "Thursday",
+      breakfast: breakfast1,
+      lunch: lunch1,
+      dinner: dinner1,
+    };
+
+    return mealPlannerApi(data);
+  };
 
   const handleSubmit = (event, meal) => {
     if (event.keyCode == 13) {
@@ -183,6 +195,9 @@ export const MealPlannerShopping = () => {
                   );
                 })}
               </DailyMealPlanning>
+              <button className="mt-2" onClick={() => submitMeal()}>
+                Save
+              </button>
             </div>
           </li>
         </div>
@@ -212,7 +227,7 @@ export const MealPlannerShopping = () => {
             </p>
             <div className="accordion" id="accordionPanelsStayOpenExample">
               <DailyMealPlanning mealid="Healthy-Fat">
-              <form
+                <form
                   onSubmit={(event) => {
                     event.preventDefault();
                     handleSubmit(event, "dinner");

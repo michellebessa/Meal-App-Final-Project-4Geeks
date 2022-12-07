@@ -1,0 +1,17 @@
+#foodcategories {
+  border: 0px;
+  margin-bottom: 10px;
+  border-radius: 10%;
+  background-color: rgb(245, 245, 244, 0.5);
+}
+.expiration2 {
+  text-align: center;
+}
+.btn {
+  padding: 0px;
+}
+.fas {
+  font-size: 25px;
+  color: #c5d8a4;
+  width: 30px;
+}

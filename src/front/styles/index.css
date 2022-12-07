@@ -13,24 +13,8 @@
   z-index: -100;
   filter: saturate(125%) blur(5px);
 }
-.navbar-brand {
-  color: black;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-.navbar {
-  background-color: #aa8b56;
-  margin-bottom:30px;
-}
 .footer {
   background-color: #aa8b56;
-}
-.btn {
-  padding: 0px;
-}
-.fas {
-  font-size: 25px;
-  color: #c5d8a4;
-  width: 30px;
 }
 span {
   margin-left: 40%;
@@ -48,19 +32,9 @@ span {
   margin-bottom: 5%;
   text-align: center;
 }
-.expiration2 {
-  text-align: center;
-  border-top: 1px solid black;
-}
 img {
   width: 300px;
   border-radius: 50%;
-}
-#foodcategories {
-  border: 0px;
-  margin-bottom: 10px;
-  border-radius: 10%;
-  background-color: rgb(245, 245, 244, 0.5);
 }
 .btn {
   background-color: #aa8b56;

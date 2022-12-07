@@ -8,16 +8,13 @@ export const MealPlannerShopping = () => {
   const { store, actions } = useContext(Context);
 
   // Here are the hooks for the weekly meals accordion
-
   const [breakfast, setBreakfast] = useState([]);
   const [breakfastInput, setBreakfastInput] = useState("");
   const [lunch, setLunch] = useState([]);
   const [lunchInput, setLunchInput] = useState("");
   const [dinner, setDinner] = useState([]);
   const [dinnerInput, setDinnerInput] = useState("");
-
   //  Here are the hooks for the shopping list accordion
-
   const [healthyfat, setHealthyFat] = useState([]);
   const [healthyfatInput, setHealthyFatInput] = useState("");
   const [protein, setProtein] = useState([]);
@@ -44,10 +41,11 @@ export const MealPlannerShopping = () => {
 
   const handleSubmit = (event, meal) => {
     if (event.keyCode == 13) {
+      //react hooks for daily meal planner accordion
       setBreakfast([...breakfast, breakfastInput]);
       setLunch([...lunch, lunchInput]);
       setDinner([...dinner, dinnerInput]);
-
+      //react hooks for shopping list accordion
       setHealthyFat([...healthyfat, healthyfatInput]);
       setProtein([...protein, proteinInput]);
       setDairy([...dairy, dairyInput]);
@@ -68,7 +66,6 @@ export const MealPlannerShopping = () => {
     } else if (meal == "dinner" && dinnerInput) {
       setDinner([...dinner, dinnerInput]);
       setDinnerInput("");
-
       //Here are the handleSubmit for the shopping list accordion
     } else if (meal == "healthyfat" && healthyfatInput) {
       setHealthyFat([...healthyfat, healthyfatInput]);
@@ -230,19 +227,19 @@ export const MealPlannerShopping = () => {
                 <form
                   onSubmit={(event) => {
                     event.preventDefault();
-                    handleSubmit(event, "dinner");
+                    handleSubmit(event, "healthyfat");
                   }}
                 >
                   <input
                     className="inputmealplanner"
                     placeholder="Add an item to your list"
-                    value={dinnerInput}
+                    value={healthyfatInput}
                     onChange={(event) => {
-                      setDinnerInput(event.target.value);
+                      setHealthyFatInput(event.target.value);
                     }}
                   ></input>
                 </form>
-                {dinner.map((meal) => {
+                {healthyfat.map((meal) => {
                   return (
                     <ul className="m-0">
                       <li id="mealmap">{meal}</li>
@@ -251,34 +248,124 @@ export const MealPlannerShopping = () => {
                 })}
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Protein">
-                <input
-                  className="inputmealplanner"
-                  placeholder="Add an item to your list"
-                ></input>
+                <form
+                  onSubmit={(event) => {
+                    event.preventDefault();
+                    handleSubmit(event, "protein");
+                  }}
+                >
+                  <input
+                    className="inputmealplanner"
+                    placeholder="Add an item to your list"
+                    value={proteinInput}
+                    onChange={(event) => {
+                      setProteinInput(event.target.value);
+                    }}
+                  ></input>
+                </form>
+                {protein.map((meal) => {
+                  return (
+                    <ul className="m-0">
+                      <li id="mealmap">{meal}</li>
+                    </ul>
+                  );
+                })}
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Dairy">
-                <input
-                  className="inputmealplanner"
-                  placeholder="Add an item to your list"
-                ></input>
+                <form
+                  onSubmit={(event) => {
+                    event.preventDefault();
+                    handleSubmit(event, "dairy");
+                  }}
+                >
+                  <input
+                    className="inputmealplanner"
+                    placeholder="Add an item to your list"
+                    value={dairyInput}
+                    onChange={(event) => {
+                      setDairyInput(event.target.value);
+                    }}
+                  ></input>
+                </form>
+                {dairy.map((meal) => {
+                  return (
+                    <ul className="m-0">
+                      <li id="mealmap">{meal}</li>
+                    </ul>
+                  );
+                })}
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Grains-Carbohydrates">
-                <input
-                  className="inputmealplanner"
-                  placeholder="Add an item to your list"
-                ></input>
+                <form
+                  onSubmit={(event) => {
+                    event.preventDefault();
+                    handleSubmit(event, "grainscarbohydrates");
+                  }}
+                >
+                  <input
+                    className="inputmealplanner"
+                    placeholder="Add an item to your list"
+                    value={grainscarbohydratesInput}
+                    onChange={(event) => {
+                      setGrainscarbohydratesInput(event.target.value);
+                    }}
+                  ></input>
+                </form>
+                {grainscarbohydrates.map((meal) => {
+                  return (
+                    <ul className="m-0">
+                      <li id="mealmap">{meal}</li>
+                    </ul>
+                  );
+                })}
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Vegetables">
-                <input
-                  className="inputmealplanner"
-                  placeholder="Add an item to your list"
-                ></input>
+                <form
+                  onSubmit={(event) => {
+                    event.preventDefault();
+                    handleSubmit(event, "vegetables");
+                  }}
+                >
+                  <input
+                    className="inputmealplanner"
+                    placeholder="Add an item to your list"
+                    value={vegetablesInput}
+                    onChange={(event) => {
+                      setVegetablesInput(event.target.value);
+                    }}
+                  ></input>
+                </form>
+                {vegetables.map((meal) => {
+                  return (
+                    <ul className="m-0">
+                      <li id="mealmap">{meal}</li>
+                    </ul>
+                  );
+                })}
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Fruits">
-                <input
-                  className="inputmealplanner"
-                  placeholder="Add an item to your list"
-                ></input>
+                <form
+                  onSubmit={(event) => {
+                    event.preventDefault();
+                    handleSubmit(event, "fruits");
+                  }}
+                >
+                  <input
+                    className="inputmealplanner"
+                    placeholder="Add an item to your list"
+                    value={fruitsInput}
+                    onChange={(event) => {
+                      setFruitsInput(event.target.value);
+                    }}
+                  ></input>
+                </form>
+                {fruits.map((meal) => {
+                  return (
+                    <ul className="m-0">
+                      <li id="mealmap">{meal}</li>
+                    </ul>
+                  );
+                })}
               </DailyMealPlanning>
             </div>
           </li>

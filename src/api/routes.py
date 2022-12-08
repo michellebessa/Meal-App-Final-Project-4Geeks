@@ -2,7 +2,7 @@
 This module takes care of starting the API Server, Loading the DB and Adding the endpoints
 """
 from flask import Flask, request, jsonify, url_for, Blueprint
-from api.models import db, User, Meal_planner
+from api.models import db, User, Meal_planner, Meal_shop
 from api.utils import generate_sitemap, APIException
 
 api = Blueprint('api', __name__)
@@ -57,3 +57,14 @@ def delete_meal_planner():
     all_mealplanner = list(map(lambda x: x.serialize(), mealplanner_query))
 
     return jsonify(all_mealplanner), 200    
+
+@api.route('/mealshop', methods=['POST'])
+def meal_shop():
+    body = request.json
+    mealshop = Meal_shop(days_of_the_week = body["days_of_the_week"], healthyfat=body["healthyfat"], protein=body["protein"], dairy=body["dairy"], grainscarbohydrates=body["grainscarbohydrates"], vegetables=body["vegetables"], fruits=body["fruits"])
+    db.session.add(mealshop)
+    db.session.commit()
+    mealshop_query = Meal_shop.query.all()
+    all_mealshop = list(map(lambda x: x.serialize(), mealshop_query))
+
+    return jsonify(all_mealshop), 200

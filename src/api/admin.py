@@ -1,7 +1,7 @@
   
 import os
 from flask_admin import Admin
-from .models import db, User, Meal_planner
+from .models import db, User, Meal_planner, Meal_shop
 from flask_admin.contrib.sqla import ModelView
 
 def setup_admin(app):
@@ -16,3 +16,4 @@ def setup_admin(app):
 
     # You can duplicate that line to add mew models
     # admin.add_view(ModelView(YourModelName, db.session))
+    admin.add_view(ModelView(Meal_shop, db.session))

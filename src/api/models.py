@@ -20,10 +20,11 @@ class User(db.Model):
 
 class Meal_planner(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    days_of_the_week = db.Column(db.String(120), unique=True, nullable=False)
+    days_of_the_week = db.Column(db.String(120), unique=False, nullable=False)
     breakfast = db.Column(db.String(80), unique=False, nullable=True)
     lunch = db.Column(db.String(80), unique=False, nullable=True)
     dinner = db.Column(db.String(80), unique=False, nullable=True) 
+
 
     def __repr__(self):
         return f'<Meal_planner {self.id}>'
@@ -35,5 +36,32 @@ class Meal_planner(db.Model):
             "breakfast": self.breakfast,
             "lunch": self.lunch,
             "dinner": self.dinner,
+            # do not serialize the password, its a security breach
+        }
+
+class Meal_shop(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    days_of_the_week = db.Column(db.String(120), unique=False, nullable=False)
+    healthyfat = db.Column(db.String(80), unique=False, nullable=True)
+    protein = db.Column(db.String(80), unique=False, nullable=True)
+    dairy = db.Column(db.String(80), unique=False, nullable=True) 
+    grainscarbohydrates = db.Column(db.String(80), unique=False, nullable=True)
+    vegetables = db.Column(db.String(80), unique=False, nullable=True)
+    fruits = db.Column(db.String(80), unique=False, nullable=True) 
+
+
+    def __repr__(self):
+        return f'<Meal_shop {self.id}>'
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "days_of_the_week": self.days_of_the_week, 
+            "healthyfat": self.healthyfat,
+            "protein": self.protein,
+            "dairy": self.dairy,
+            "grainscarbohydrates": self.grainscarbohydrates,
+            "vegetables": self.vegetables,
+            "fruits": self.fruits,
             # do not serialize the password, its a security breach
         }

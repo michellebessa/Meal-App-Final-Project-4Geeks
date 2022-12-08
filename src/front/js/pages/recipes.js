@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { WeekDay, DailyMealPlanning } from "./codecleaner.js";
+import { FoodCategoriesModal } from "./foodcategories.js";
 
 const RecipesButtonModal = () => {
   <button
@@ -46,34 +47,104 @@ export const Recipes = () => {
                 </row>
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Bulk/Surplus">
-                <input
-                  className="inputmealplanner"
-                  placeholder="Add an item to your list"
-                ></input>
+                <row>
+                  <button
+                    type="button"
+                    className="btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#"
+                  >
+                    <i className="fas fa-utensils"></i> Learn More
+                  </button>
+                  <button type="button" className="btn">
+                    <i className="fas fa-plus" id="recipesicon"></i>Add recipe
+                    to list
+                  </button>
+                  <button type="button" className="btn">
+                    <i className="fas fa-plus" id="recipesicon"></i>Types of
+                    Cuisine
+                  </button>
+                </row>
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Keto">
-                <input
-                  className="inputmealplanner"
-                  placeholder="Add an item to your list"
-                ></input>
+                <row>
+                  <button
+                    type="button"
+                    className="btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#"
+                  >
+                    <i className="fas fa-utensils"></i> Learn More
+                  </button>
+                  <button type="button" className="btn">
+                    <i className="fas fa-plus" id="recipesicon"></i>Add recipe
+                    to list
+                  </button>
+                  <button type="button" className="btn">
+                    <i className="fas fa-plus" id="recipesicon"></i>Types of
+                    Cuisine
+                  </button>
+                </row>
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Vegetarian">
-                <input
-                  className="inputmealplanner"
-                  placeholder="Add an item to your list"
-                ></input>
+                <row>
+                  <button
+                    type="button"
+                    className="btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#"
+                  >
+                    <i className="fas fa-utensils"></i> Learn More
+                  </button>
+                  <button type="button" className="btn">
+                    <i className="fas fa-plus" id="recipesicon"></i>Add recipe
+                    to list
+                  </button>
+                  <button type="button" className="btn">
+                    <i className="fas fa-plus" id="recipesicon"></i>Types of
+                    Cuisine
+                  </button>
+                </row>
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Pescatarian">
-                <input
-                  className="inputmealplanner"
-                  placeholder="Add an item to your list"
-                ></input>
+                <row>
+                  <button
+                    type="button"
+                    className="btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#"
+                  >
+                    <i className="fas fa-utensils"></i> Learn More
+                  </button>
+                  <button type="button" className="btn">
+                    <i className="fas fa-plus" id="recipesicon"></i>Add recipe
+                    to list
+                  </button>
+                  <button type="button" className="btn">
+                    <i className="fas fa-plus" id="recipesicon"></i>Types of
+                    Cuisine
+                  </button>
+                </row>
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Vegan">
-                <input
-                  className="inputmealplanner"
-                  placeholder="Add an item to your list"
-                ></input>
+                <row>
+                  <button
+                    type="button"
+                    className="btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#"
+                  >
+                    <i className="fas fa-utensils"></i> Learn More
+                  </button>
+                  <button type="button" className="btn">
+                    <i className="fas fa-plus" id="recipesicon"></i>Add recipe
+                    to list
+                  </button>
+                  <button type="button" className="btn">
+                    <i className="fas fa-plus" id="recipesicon"></i>Types of
+                    Cuisine
+                  </button>
+                </row>
               </DailyMealPlanning>
             </div>
           </li>

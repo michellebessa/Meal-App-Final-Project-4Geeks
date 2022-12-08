@@ -53,7 +53,7 @@ export const FoodCategories = () => {
                   <i className="fas fa-utensils"></i> Learn More
                 </button>
                 <button type="button" className="btn">
-                  <i className="fas fa-plus"></i>Add item to list
+                  <i className="fas fa-plus"></i>Add item to shopping list
                 </button>
 
                 <FoodCategoriesModal modalid="fatmodal">
@@ -81,7 +81,7 @@ export const FoodCategories = () => {
                   <i className="fas fa-utensils"></i> Learn More
                 </button>
                 <button type="button" className="btn">
-                  <i className="fas fa-plus"></i>Add item to list
+                  <i className="fas fa-plus"></i>Add item to shopping list
                 </button>
 
                 <FoodCategoriesModal modalid="proteinmodal">
@@ -116,7 +116,7 @@ export const FoodCategories = () => {
                   <i className="fas fa-utensils"></i> Learn More
                 </button>
                 <button type="button" className="btn">
-                  <i className="fas fa-plus"></i>Add item to list
+                  <i className="fas fa-plus"></i>Add item to shopping list
                 </button>
 
                 <FoodCategoriesModal modalid="dairymodal">
@@ -147,7 +147,7 @@ export const FoodCategories = () => {
                   <i className="fas fa-utensils"></i> Learn More
                 </button>
                 <button type="button" className="btn">
-                  <i className="fas fa-plus"></i> Add item to list
+                  <i className="fas fa-plus"></i>Add item to shopping list
                 </button>
 
                 <FoodCategoriesModal modalid="grainscarbohydratesmodal">
@@ -178,7 +178,7 @@ export const FoodCategories = () => {
                   <i class="fas fa-utensils"></i> Learn More
                 </button>
                 <button type="button" className="btn">
-                  <i className="fas fa-plus"></i> Add item to list
+                  <i className="fas fa-plus"></i>Add item to shopping list
                 </button>
 
                 <FoodCategoriesModal modalid="vegetablesmodal">
@@ -208,7 +208,7 @@ export const FoodCategories = () => {
                   <i className="fas fa-utensils"></i> Learn More
                 </button>
                 <button type="button" className="btn">
-                  <i className="fas fa-plus"></i> Add item to list
+                  <i className="fas fa-plus"></i>Add item to shopping list
                 </button>
 
                 <FoodCategoriesModal modalid="fruitsmodal">

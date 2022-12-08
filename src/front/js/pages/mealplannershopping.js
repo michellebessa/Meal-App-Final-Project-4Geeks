@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import { mealPlannerApi } from "../component/api";
+import { mealPlannerApi, mealShopApi } from "../component/api";
 import { Context } from "../store/appContext";
 import { WeekDay, DailyMealPlanning } from "./codecleaner.js";
 
@@ -27,16 +27,56 @@ export const MealPlannerShopping = () => {
   const [vegetablesInput, setVegetablesInput] = useState("");
   const [fruits, setFruits] = useState([]);
   const [fruitsInput, setFruitsInput] = useState("");
+  // Here are the hooks for the days of the week
+  const [day, setDay] = useState("Select Week Day");
+  const [dayShop, setDayShop] = useState("Select Week Day");
 
-  const submitMeal = (breakfast1, lunch1, dinner1) => {
+  const submitMeal = (breakfast1, lunch1, dinner1, day1) => {
     const data = {
-      days_of_the_week: "Thursday",
+      days_of_the_week: day1,
       breakfast: breakfast1,
       lunch: lunch1,
       dinner: dinner1,
     };
 
-    return mealPlannerApi(data);
+    return (
+      mealPlannerApi(data),
+      setBreakfast([]),
+      setLunch([]),
+      setDinner([]),
+      setDay(["Select Week Day"])
+    );
+  };
+
+  const submitShop = (
+    healthyfat1,
+    protein1,
+    dairy1,
+    grainscarbohydrates1,
+    vegetables1,
+    fruits1,
+    dayshop1
+  ) => {
+    const data = {
+      days_of_the_week: dayshop1,
+      healthyfat: healthyfat1,
+      protein: protein1,
+      dairy: dairy1,
+      grainscarbohydrates: grainscarbohydrates1,
+      vegetables: vegetables1,
+      fruits: fruits1,
+    };
+
+    return (
+      mealShopApi(data),
+      setHealthyFat([]),
+      setProtein([]),
+      setDairy([]),
+      setGrainscarbohydrates([]),
+      setVegetables([]),
+      setFruits([]),
+      setDayShop(["Select Week Day"])
+    );
   };
 
   const handleSubmit = (event, meal) => {
@@ -104,16 +144,30 @@ export const MealPlannerShopping = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Select Week Day
+                  {day ? day : "Select Week Day"}
                 </button>
                 <ul className="dropdown-menu">
-                  <WeekDay day="Monday" />
-                  <WeekDay day="Tuesday" />
-                  <WeekDay day="Wednesday" />
-                  <WeekDay day="Thursday" />
-                  <WeekDay day="Friday" />
-                  <WeekDay day="Saturday" />
-                  <WeekDay day="Sunday" />
+                  <li onClick={() => setDay("Monday")}>
+                    <WeekDay day="Monday" />
+                  </li>
+                  <li onClick={() => setDay("Tuesday")}>
+                    <WeekDay day="Tuesday" />
+                  </li>
+                  <li onClick={() => setDay("Wednesday")}>
+                    <WeekDay day="Wednesday" />
+                  </li>
+                  <li onClick={() => setDay("Thursday")}>
+                    <WeekDay day="Thursday" />
+                  </li>
+                  <li onClick={() => setDay("Friday")}>
+                    <WeekDay day="Friday" />
+                  </li>
+                  <li onClick={() => setDay("Saturday")}>
+                    <WeekDay day="Saturday" />
+                  </li>
+                  <li onClick={() => setDay("Sunday")}>
+                    <WeekDay day="Sunday" />
+                  </li>
                 </ul>
               </div>
             </p>
@@ -192,7 +246,10 @@ export const MealPlannerShopping = () => {
                   );
                 })}
               </DailyMealPlanning>
-              <button className="mt-2" onClick={() => submitMeal()}>
+              <button
+                className="mt-2"
+                onClick={() => submitMeal(breakfast, lunch, dinner, day)}
+              >
                 Save
               </button>
             </div>
@@ -209,16 +266,30 @@ export const MealPlannerShopping = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Select Week Day
+                  {dayShop ? dayShop : "Select Week Day"}
                 </button>
                 <ul className="dropdown-menu">
-                  <WeekDay day="Monday" />
-                  <WeekDay day="Tuesday" />
-                  <WeekDay day="Wednesday" />
-                  <WeekDay day="Thursday" />
-                  <WeekDay day="Friday" />
-                  <WeekDay day="Saturday" />
-                  <WeekDay day="Sunday" />
+                  <li onClick={() => setDayShop("Monday")}>
+                    <WeekDay day="Monday" />
+                  </li>
+                  <li onClick={() => setDayShop("Tuesday")}>
+                    <WeekDay day="Tuesday" />
+                  </li>
+                  <li onClick={() => setDayShop("Wednesday")}>
+                    <WeekDay day="Wednesday" />
+                  </li>
+                  <li onClick={() => setDayShop("Thursday")}>
+                    <WeekDay day="Thursday" />
+                  </li>
+                  <li onClick={() => setDayShop("Friday")}>
+                    <WeekDay day="Friday" />
+                  </li>
+                  <li onClick={() => setDayShop("Saturday")}>
+                    <WeekDay day="Saturday" />
+                  </li>
+                  <li onClick={() => setDayShop("Sunday")}>
+                    <WeekDay day="Sunday" />
+                  </li>
                 </ul>
               </div>
             </p>
@@ -367,6 +438,22 @@ export const MealPlannerShopping = () => {
                   );
                 })}
               </DailyMealPlanning>
+              <button
+                className="mt-2"
+                onClick={() =>
+                  submitShop(
+                    healthyfat,
+                    protein,
+                    dairy,
+                    grainscarbohydrates,
+                    vegetables,
+                    fruits,
+                    dayShop
+                  )
+                }
+              >
+                Save
+              </button>
             </div>
           </li>
         </div>

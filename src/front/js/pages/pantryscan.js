@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
+import parse from "html-react-parser";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import BarcodeScannerComponent from "react-qr-barcode-scanner";
@@ -6,42 +7,24 @@ import BarcodeScannerComponent from "react-qr-barcode-scanner";
 export const PantryScan = () => {
   const { store, actions } = useContext(Context);
 
+  const [data, setData] = React.useState("Not Found");
+
   return (
-    <div className="container">
-      <ul className="list-group">
-        {store.demo.map((item, index) => {
-          return (
-            <li
-              key={index}
-              className="list-group-item d-flex justify-content-between"
-              style={{ background: item.background }}
-            >
-              <Link to={"/single/" + index}>
-                <span>Link to: {item.title}</span>
-              </Link>
-              {
-                // Conditional render example
-                // Check to see if the background is orange, if so, display the message
-                item.background === "orange" ? (
-                  <p style={{ color: item.initial }}>
-                    Check store/flux.js scroll to the actions to see the code
-                  </p>
-                ) : null
-              }
-              <button
-                className="btn btn-success"
-                onClick={() => actions.changeColor(index, "orange")}
-              >
-                Change Color
-              </button>
-            </li>
-          );
-        })}
-      </ul>
-      <br />
-      <Link to="/">
-        <button className="btn btn-primary">Back home</button>
-      </Link>
+    <div className="d-flex align-items-center gap-3">
+      <BarcodeScannerComponent
+        width={500}
+        height={500}
+        onUpdate={(err, result) => {
+          if (result) setData(result.text);
+          else setData("Not Found");
+        }}
+      />
+      {/* <p>{data}</p> */}
+      <div className="bg-light nutrition-facts">
+        {/*nutrition label goes here*/}
+        {parse("<strong>Ernesto</strong>")}
+        <h1>HI</h1>
+      </div>
     </div>
   );
 };

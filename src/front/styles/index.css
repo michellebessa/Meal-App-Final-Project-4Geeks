@@ -58,7 +58,7 @@ img {
 #foodexpiring {
   border: 0px;
   margin-bottom: 10px;
-  border-radius:10%;
+  border-radius: 10%;
   background-color: rgb(245, 245, 244, 0.5);
 }
 .btn {
@@ -88,12 +88,16 @@ h2 {
   color: #224b0c;
   background-color: rgb(245, 245, 244, 0.5);
   width: 50%;
-  margin-left:25%;
-  margin-bottom:3%;
+  margin-left: 25%;
+  margin-bottom: 3%;
 }
-#imghome{
-  border-radius:0px;
-  width:50%;
-  margin-left:25%;
-  margin-top:3%;
+#imghome {
+  border-radius: 0px;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 3%;
+}
+.nutrition-facts {
+  height: 800px;
+  width: 500px;
 }

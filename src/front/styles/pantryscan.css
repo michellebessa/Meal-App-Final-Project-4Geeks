@@ -1,0 +1,24 @@
+.barcodeimg {
+  border-radius: 0px;
+  width: 70%;
+}
+.barcodebutton {
+  margin-left: 13%;
+  margin-top:10px;
+}
+#barcodecol1 {
+  float: left;
+  margin-left:10%;
+  margin-top: 5%;
+}
+#barcodecol2 {
+  float: right;
+  margin-right:10%;
+  margin-top: 5%;
+  border:1px white solid;
+  background-color: #2b4e1b;
+}
+.barcodeinfo{
+    color:white;
+    margin-top:25%;
+}

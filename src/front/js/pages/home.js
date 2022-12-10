@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import pictureProjectUrl from "../../img/project-pic.jpg";
+import "../../styles/home.css";
 import { FoodExpiring } from "./foodcategories";
+
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
@@ -32,7 +34,7 @@ export const Home = () => {
               How do we help you organize your food items? A practical way is by
               separating your food items by food categories.
             </p>
-            <Link to="/foodexpiring">
+            <Link to="/foodcategories">
               <span className="m-auto">Click here to learn more!</span>
             </Link>
           </h3>

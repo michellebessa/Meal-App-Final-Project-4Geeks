@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { mealPlannerApi, mealShopApi } from "../component/api";
 import { Context } from "../store/appContext";
 import { WeekDay, DailyMealPlanning } from "./codecleaner.js";
+import "../../styles/mealplannershopping.css";
 
 export const MealPlannerShopping = () => {
   const { store, actions } = useContext(Context);

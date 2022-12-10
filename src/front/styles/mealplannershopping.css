@@ -1,0 +1,16 @@
+#mealplannershopping {
+  background-color: whitesmoke;
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+.inputmealplanner {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5px;
+}
+#mealmap {
+  width: 30px;
+  color: green;
+  margin: 0px;
+}

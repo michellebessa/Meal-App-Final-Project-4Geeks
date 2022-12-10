@@ -1,0 +1,11 @@
+.forminput{
+    background-color: lightgrey;
+    width: 350px;
+    padding: 20px;
+    margin: 20px;
+    text-align: left;
+}
+.emailtext{
+    color:gray;
+    font-size:13px;
+}

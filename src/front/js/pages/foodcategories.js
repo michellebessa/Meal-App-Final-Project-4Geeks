@@ -57,13 +57,21 @@ export const FoodCategories = () => {
                 </button>
 
                 <FoodCategoriesModal modalid="fatmodal">
-                  <h2>What is Healthy Fat?</h2>A small amount of fat is an
-                  essential part of a healthy, balanced diet. Fat is a source of
-                  essential fatty acids, which the body cannot make itself. Fat
-                  helps the body absorb vitamin A, vitamin D and vitamin E.
-                  These vitamins are fat-soluble, which means they can only be
-                  absorbed with the help of fats. Examples of fats are butter,
-                  cheese, oils, nuts, seeds and chocolates.
+                  <h2>Healthy Fat</h2>
+                  Healthy Fat foods are known as the “good fats”, because they
+                  are good for your heart, your cholesterol, and your overall
+                  health. A small amount of fat is an essential part of a
+                  healthy, balanced diet. It's a source of essential fatty
+                  acids, which the body cannot make itself. Fat helps the body
+                  absorb vitamin A, vitamin D and vitamin E. These vitamins are
+                  fat-soluble, which means they can only be absorbed with the
+                  help of fats. <p>Examples of Healhy Fats are:</p>
+                  <p>
+                    <strong>
+                      Butter, Cheese, Milk, Oil (Olive, Canola, Avocado, etc),
+                      Nuts, Seeds and Chocolate.
+                    </strong>
+                  </p>
                 </FoodCategoriesModal>
               </li>
             </div>
@@ -85,20 +93,25 @@ export const FoodCategories = () => {
                 </button>
 
                 <FoodCategoriesModal modalid="proteinmodal">
-                  <h2>What is Protein?</h2>Protein is found throughout the
-                  body—in muscle, bone, skin, hair, and virtually every other
-                  body part or tissue. It makes up the enzymes that power many
-                  chemical reactions and the hemoglobin that carries oxygen in
-                  your blood. At least 10,000 different proteins make you what
-                  you are and keep you that way. Protein is made from
-                  twenty-plus basic building blocks called amino acids. Because
-                  we don’t store amino acids, our bodies make them in two
-                  different ways: either from scratch, or by modifying others.
-                  Nine amino acids—histidine, isoleucine, leucine, lysine,
-                  methionine, phenylalanine, threonine, tryptophan, and
-                  valine—known as the essential amino acids, must come from
-                  food. Examples of protein are meats, poultry, protein powders,
-                  fish, eggs, shrimp, crab and lobsters, etc.
+                  <h2>Protein</h2>Protein is found throughout the body—in
+                  muscle, bone, skin, hair, and virtually every other body part
+                  or tissue. It makes up the enzymes that power many chemical
+                  reactions and the hemoglobin that carries oxygen in your
+                  blood. At least 10,000 different proteins make you what you
+                  are and keep you that way. Protein is made from twenty-plus
+                  basic building blocks called amino acids. Because we don’t
+                  store amino acids, our bodies make them in two different ways:
+                  either from scratch, or by modifying others. Nine amino
+                  acids—histidine, isoleucine, leucine, lysine, methionine,
+                  phenylalanine, threonine, tryptophan, and valine-known as the
+                  essential amino acids, must come from food.{" "}
+                  <p>Examples of Proteins are:</p>
+                  <p>
+                    <strong>
+                      Meat, Beans, Eggs, Seafood, Yogurt, Lentils, Soy and
+                      White-Meat Poultry.
+                    </strong>
+                  </p>
                 </FoodCategoriesModal>
               </li>
             </div>
@@ -120,12 +133,20 @@ export const FoodCategories = () => {
                 </button>
 
                 <FoodCategoriesModal modalid="dairymodal">
-                  <h2>What is Dairy?</h2>The nutrients and types of fat in dairy
-                  are involved with bone health, cardiovascular disease, and
-                  other conditions. Calcium, vitamin D, and phosphorus are
-                  important for bone building, and the high potassium content of
-                  dairy foods can help lower blood pressure. Examples of dairy
-                  are milk, yogurt, cheese, Greek yogurt, and cottage cheese.
+                  <h2>Dairy</h2>
+                  Dairy products or Milk products, also known as lacticinia, are
+                  food products made from milk. Eating or drinking Dairy
+                  products offers health benefits, like building and maintaining
+                  strong bones. Dairy Group foods provide nutrients that are
+                  vital for the health and maintenance of the body. These
+                  nutrients include calcium, potassium, vitamin D, and protein.
+                  <p>Examples of Dairy foods are:</p>
+                  <p>
+                    <strong>
+                      Milk, Yogurt, Butter, Cheese, Cream (Heavy Cream, Sour
+                      Cream, etc) and Ice Cream.
+                    </strong>
+                  </p>
                 </FoodCategoriesModal>
               </li>
             </div>
@@ -151,15 +172,17 @@ export const FoodCategories = () => {
                 </button>
 
                 <FoodCategoriesModal modalid="grainscarbohydratesmodal">
-                  <h2>What are Grains/Carbohydrates?</h2>Carbohydrates, or
-                  carbs, are sugar molecules. Along with proteins and fats,
-                  carbohydrates are one of three main nutrients found in foods
-                  and drinks. Your body breaks down carbohydrates into glucose.
-                  Glucose, or blood sugar, is the main source of energy for your
-                  body's cells, tissues, and organs. Carbohydrates include
-                  sugars, starches, and fiber. Examples of carbohydrates are
-                  bread, pasta, rice, fruits, cereal, beans, potato, sweet
-                  potato, and some vegetables.
+                  <h2>Grains/Carbohydrates</h2>Carbohydrates are your body's
+                  main source of energy: They help fuel your brain, kidneys,
+                  heart muscles, and central nervous system. For instance, fiber
+                  is a carbohydrate that aids in digestion, helps you feel full,
+                  and keeps blood cholesterol levels in check.
+                  <p>Examples of Grains/Carbohydrates are:</p>
+                  <p>
+                    <strong>
+                      Bread, Noodles, Pasta, Crackers, Cereals and Rice.
+                    </strong>
+                  </p>
                 </FoodCategoriesModal>
               </li>
               <div></div>
@@ -182,14 +205,18 @@ export const FoodCategories = () => {
                 </button>
 
                 <FoodCategoriesModal modalid="vegetablesmodal">
-                  <h2>What are Vegetables?</h2>Eating vegetables represents
-                  important part of your daily diet that provides our bodies
-                  with important nutrients. Vegetables can regulate our
-                  metabolism, protect skin, help our bones, bloodstream, heart,
-                  guts, reduce risk of cancer, preserve our eyesight and much
-                  more. Examples of vegetables are spinach, carrots, broccoli,
-                  cauliflower, asparagus, green beans, kale, onions, peppers,
-                  and etc.
+                  <h2>Vegetables</h2>Vegetables are very rich in nutrients. They
+                  can regulate our metabolism, protect skin, help our bones,
+                  bloodstream, heart, guts, reduce risk of cancer, preserve our
+                  eyesight and much more.
+                  <p>Examples of Vegetables are:</p>
+                  <p>
+                    <strong>
+                      Spinach, Carrot, Broccoli, Cauliflower, Asparagus, Green
+                      Beans, Kale, Lettuce, Cucumber, Onion, Spinach and
+                      Peppers.
+                    </strong>
+                  </p>
                 </FoodCategoriesModal>
               </li>
               <div></div>
@@ -212,12 +239,17 @@ export const FoodCategories = () => {
                 </button>
 
                 <FoodCategoriesModal modalid="fruitsmodal">
-                  <h2>What are Fruits?</h2>The consumption of fruit is not only
-                  essential for the health and maintenance of body but they
-                  actually make your skin look radiant, young and glowing as
-                  fruits are full of anti-oxidants. Examples of fruit are
-                  strawberries, watermelon, pineapples, all types of berries,
-                  oranges, grapes, apples, kiwi, and etc.
+                  <h2>Fruits</h2>The consumption of fruit is not only essential
+                  for the health and maintenance of body but they actually make
+                  your skin look radiant, young and glowing as fruits are full
+                  of anti-oxidants.
+                  <p>Examples of fruit are</p>
+                  <p>
+                    <strong>
+                      Strawberries, Watermelon, Pineapples, Berries, Oranges,
+                      Grapes, Apples, Kiwi, etc.
+                    </strong>
+                  </p>
                 </FoodCategoriesModal>
               </li>
             </div>

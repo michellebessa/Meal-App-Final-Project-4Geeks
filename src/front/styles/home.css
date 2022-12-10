@@ -1,7 +1,43 @@
-/*
-    home.css: This website contains selectors only used in home.css
+.verticalSpan {
+  min-height: 83%;
+}
+.verticalSpan::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://raw.githubusercontent.com/michellebessa/meal-plan-final-project/382043667daab97dd4e7b02791b085fa3d877d49/src/front/img/project-pic.jpg");
+  background-size: cover;
+  z-index: -100;
+  filter: saturate(125%) blur(5px);
+}
+span {
+  margin-left: 40%;
+}
 
-    All pages share the styles on index.css but you should create 
-    one more css for each page that will contain the selected used 
-    on that page only (the ones not reused in other pages).
-*/
+.homedescription {
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-top: 10px;
+  color: #224b0c;
+  background-color: rgb(245, 245, 244, 0.5);
+  width: 50%;
+  margin-left: 25%;
+}
+.homedescription2 {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.hometitle {
+  margin-top: 5%;
+  padding-top: 10px;
+}
+
+#imghome {
+  border-radius: 0px;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 3%;
+}

@@ -2,17 +2,25 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { WeekDay, DailyMealPlanning } from "./codecleaner.js";
-import { FoodCategoriesModal } from "./foodcategories.js";
+import "../../styles/recipes.css";
 
-const RecipesButtonModal = () => {
-  <button
-    type="button"
-    className="btn"
-    data-bs-toggle="modal"
-    data-bs-target="#"
-  >
-    <i className="fas fa-utensils"></i> Learn More
-  </button>;
+const RecipesModal = (props) => {
+  return (
+    <div className="modal fade" id={props.modalid}>
+      <div className="modal-dialog">
+        <div className="modal-content">
+          <div className="modal-body">
+            {props.children}
+            <div>
+              <button type="button" className="btn" data-bs-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export const Recipes = () => {
@@ -32,7 +40,7 @@ export const Recipes = () => {
                     type="button"
                     className="btn"
                     data-bs-toggle="modal"
-                    data-bs-target="#"
+                    data-bs-target="#maintenancemodal"
                   >
                     <i className="fas fa-utensils"></i> Learn More
                   </button>
@@ -41,9 +49,16 @@ export const Recipes = () => {
                     to list
                   </button>
                   <button type="button" className="btn">
-                    <i className="fas fa-plus" id="recipesicon"></i>Types of
+                    <i className="fas fa-pen-alt" id="recipesicon"></i>Types of
                     Cuisine
                   </button>
+                  <RecipesModal modalid="maintenancemodal">
+                    <h2>Maintenance</h2>
+                    Eating at maintenance means that the calories you eat are
+                    roughly equivalent to the calories you expend, meaning you
+                    are eating enough to neither gain or lose weight.
+                    Bulk/Surplus:
+                  </RecipesModal>
                 </row>
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Bulk/Surplus">
@@ -61,7 +76,7 @@ export const Recipes = () => {
                     to list
                   </button>
                   <button type="button" className="btn">
-                    <i className="fas fa-plus" id="recipesicon"></i>Types of
+                    <i className="fas fa-pen-alt" id="recipesicon"></i>Types of
                     Cuisine
                   </button>
                 </row>
@@ -81,7 +96,7 @@ export const Recipes = () => {
                     to list
                   </button>
                   <button type="button" className="btn">
-                    <i className="fas fa-plus" id="recipesicon"></i>Types of
+                    <i className="fas fa-pen-alt" id="recipesicon"></i>Types of
                     Cuisine
                   </button>
                 </row>
@@ -101,7 +116,7 @@ export const Recipes = () => {
                     to list
                   </button>
                   <button type="button" className="btn">
-                    <i className="fas fa-plus" id="recipesicon"></i>Types of
+                    <i className="fas fa-pen-alt" id="recipesicon"></i>Types of
                     Cuisine
                   </button>
                 </row>
@@ -121,7 +136,7 @@ export const Recipes = () => {
                     to list
                   </button>
                   <button type="button" className="btn">
-                    <i className="fas fa-plus" id="recipesicon"></i>Types of
+                    <i className="fas fa-pen-alt" id="recipesicon"></i>Types of
                     Cuisine
                   </button>
                 </row>
@@ -141,7 +156,7 @@ export const Recipes = () => {
                     to list
                   </button>
                   <button type="button" className="btn">
-                    <i className="fas fa-plus" id="recipesicon"></i>Types of
+                    <i className="fas fa-pen-alt" id="recipesicon"></i>Types of
                     Cuisine
                   </button>
                 </row>

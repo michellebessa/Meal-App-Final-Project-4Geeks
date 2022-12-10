@@ -51,6 +51,7 @@ export const PantryScan = () => {
             }}
           />
           <p>{barcode}</p> */}
+          
         </div>
       </div>
       <div className="col" id="barcodecol2">

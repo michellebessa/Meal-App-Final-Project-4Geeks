@@ -6,7 +6,6 @@ import "../../styles/home.css";
 import pictureProjectUrl from "../../img/project-pic.jpg";
 import "../../styles/home.css";
 
-
 export const Home = () => {
   const { store, actions } = useContext(Context);
 
@@ -26,8 +25,8 @@ export const Home = () => {
               {" "}
               To achieve this, we will help your organize your food items at
               home. That will not only help you decrease food waste, but will
-              make your life much easier, once you will know what items you need
-              to shop.
+              make your life much easier, once you will know what items you have
+              at home, when they expire and what items you need to shop.
             </p>
             <p>
               How do we help you organize your food items? A practical way is by

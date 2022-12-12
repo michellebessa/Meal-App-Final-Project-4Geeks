@@ -41,8 +41,8 @@ export const FoodCategories = () => {
         <p className="foodcategoriesdescription">
           <strong>
             Click on "Learn More" to find what each food category means and what
-            food items belong to each of them. That will help you organize all
-            the pantry items from your kitchen, in a pantry list!
+            food items belong to each. That will help you organize all
+            the pantry items in your kitchen, listing each in the category that it belongs to.
           </strong>
         </p>
 

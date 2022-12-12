@@ -259,7 +259,7 @@ export const MealPlannerShopping = () => {
         </div>
         <div className="col">
           <li className="list-group-item" id="mealplannershopping">
-          <p className="dailymealplannerdescription"><strong>Use our Shopping List to write items that you need to shop!</strong></p>
+          <p className="dailymealplannerdescription"><strong>Use our Shopping List to write items that you need to shop to cook your weekly meals!</strong></p>
             <h1>Shopping List</h1>
             <p>
               <div className="dropdown">

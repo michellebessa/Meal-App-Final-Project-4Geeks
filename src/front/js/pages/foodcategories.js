@@ -36,8 +36,16 @@ export const FoodCategories = () => {
     <div className="container">
       <div className="expiration2">
         <h1>
-          <strong>Food Categories</strong>
+          <strong className="foodcategoriestitle">Food Categories</strong>
         </h1>
+        <p className="foodcategoriesdescription">
+          <strong>
+            Click on "Learn More" to find what each food category means and what
+            food items belong to each of them. That will help you organize all
+            the pantry items from your kitchen, in a pantry list!
+          </strong>
+        </p>
+
         <div className="container text-center">
           <div className="row">
             <div className="col">
@@ -53,7 +61,7 @@ export const FoodCategories = () => {
                   <i className="fas fa-utensils"></i> Learn More
                 </button>
                 <button type="button" className="btn">
-                  <i className="fas fa-plus"></i>Add item to shopping list
+                  <i className="fas fa-plus"></i>Add item to pantry list
                 </button>
 
                 <FoodCategoriesModal modalid="fatmodal">
@@ -89,7 +97,7 @@ export const FoodCategories = () => {
                   <i className="fas fa-utensils"></i> Learn More
                 </button>
                 <button type="button" className="btn">
-                  <i className="fas fa-plus"></i>Add item to shopping list
+                  <i className="fas fa-plus"></i>Add item to pantry list
                 </button>
 
                 <FoodCategoriesModal modalid="proteinmodal">
@@ -129,7 +137,7 @@ export const FoodCategories = () => {
                   <i className="fas fa-utensils"></i> Learn More
                 </button>
                 <button type="button" className="btn">
-                  <i className="fas fa-plus"></i>Add item to shopping list
+                  <i className="fas fa-plus"></i>Add item to pantry list
                 </button>
 
                 <FoodCategoriesModal modalid="dairymodal">
@@ -168,7 +176,7 @@ export const FoodCategories = () => {
                   <i className="fas fa-utensils"></i> Learn More
                 </button>
                 <button type="button" className="btn">
-                  <i className="fas fa-plus"></i>Add item to shopping list
+                  <i className="fas fa-plus"></i>Add item to pantry list
                 </button>
 
                 <FoodCategoriesModal modalid="grainscarbohydratesmodal">
@@ -201,7 +209,7 @@ export const FoodCategories = () => {
                   <i class="fas fa-utensils"></i> Learn More
                 </button>
                 <button type="button" className="btn">
-                  <i className="fas fa-plus"></i>Add item to shopping list
+                  <i className="fas fa-plus"></i>Add item to pantry list
                 </button>
 
                 <FoodCategoriesModal modalid="vegetablesmodal">
@@ -235,7 +243,7 @@ export const FoodCategories = () => {
                   <i className="fas fa-utensils"></i> Learn More
                 </button>
                 <button type="button" className="btn">
-                  <i className="fas fa-plus"></i>Add item to shopping list
+                  <i className="fas fa-plus"></i>Add item to pantry list
                 </button>
 
                 <FoodCategoriesModal modalid="fruitsmodal">

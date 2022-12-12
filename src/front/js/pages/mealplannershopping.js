@@ -136,6 +136,7 @@ export const MealPlannerShopping = () => {
       <div className="row">
         <div className="col">
           <li className="list-group-item" id="mealplannershopping">
+            <p className="dailymealplannerdescription"><strong>Use our Daily Meal Planner to organize your daily meals for the week!</strong></p>
             <h1>Daily Meal Planner</h1>
             <p>
               <div className="dropdown">
@@ -258,6 +259,7 @@ export const MealPlannerShopping = () => {
         </div>
         <div className="col">
           <li className="list-group-item" id="mealplannershopping">
+          <p className="dailymealplannerdescription"><strong>Use our Shopping List to write items that you need to shop!</strong></p>
             <h1>Shopping List</h1>
             <p>
               <div className="dropdown">

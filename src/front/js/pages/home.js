@@ -5,7 +5,6 @@ import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import pictureProjectUrl from "../../img/project-pic.jpg";
 import "../../styles/home.css";
-import { FoodExpiring } from "./foodcategories";
 
 
 export const Home = () => {

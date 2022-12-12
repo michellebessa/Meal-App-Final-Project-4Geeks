@@ -32,4 +32,13 @@ h2 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-shadow: 2px 2px 5px black;
 }
-
+.foodcategoriesdescription{
+  border: 1px solid #2b4e1b;
+  color:white;
+  background-color:#2b4e1b;
+}
+.foodcategoriestitle{
+  border: 1px solid #2b4e1b;
+  background-color:#2b4e1b;
+  border-radius:10px;
+}

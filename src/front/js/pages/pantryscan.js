@@ -51,7 +51,7 @@ export const PantryScan = () => {
           <PantryScanModal modalid="pantryscanmodal">
             <p>
               <strong>
-                As soon as this modal opens, the computer will ask permition to
+                As soon as this modal opens, the computer will ask permission to
                 access my camera, so I can scan an item barcode.
               </strong>
             </p>

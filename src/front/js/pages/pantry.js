@@ -32,7 +32,7 @@ export const Pantry = () => {
   const [barcode, setBarcode] = useState("");
 
   return (
-        <div className="accordion accordion-flush" id="pantryaccordion">
+        <div className="accordion accordion-flush mt-5" id="pantryaccordion">
           <div className="accordion-item">
             <h2 className="accordion-header" id="flush-headingOne">
               <h1 className="pantrylisttitle">Pantry List</h1>

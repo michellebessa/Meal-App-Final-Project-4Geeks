@@ -10,7 +10,7 @@ export const Login = () => {
 
   return (
     <div>
-      <form className="loginpage">
+      <form className="loginpage mt-5">
         <div className="mb-3">
           <h1>Login</h1>
           <label for="exampleInputEmail1" className="form-label">

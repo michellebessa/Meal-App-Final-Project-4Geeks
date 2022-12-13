@@ -8,7 +8,7 @@ export const ContactUs = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <section className="contactus">
+    <section className="contactus mt-5">
       <h2 className="contactustittle text-center">Contact us</h2>
 
       <p className="contactus2">

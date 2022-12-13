@@ -33,7 +33,7 @@ export const FoodCategories = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <div className="container text-center" id="foodcategories">
+    <div className="container text-center mt-2" id="foodcategories">
         <h1>
           <strong className="foodcategoriestitle">Food Categories</strong>
         </h1>

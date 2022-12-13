@@ -4,6 +4,8 @@ import { mealPlannerApi, mealShopApi } from "../component/api";
 import { Context } from "../store/appContext";
 import { WeekDay, DailyMealPlanning } from "./codecleaner.js";
 import "../../styles/mealplannershopping.css";
+import '@mobiscroll/react/dist/css/mobiscroll.min.css';
+import { Datepicker, Button, Page, setOptions } from '@mobiscroll/react';
 
 export const MealPlannerShopping = () => {
   const { store, actions } = useContext(Context);
@@ -135,7 +137,7 @@ export const MealPlannerShopping = () => {
     <div className="mt-5">
       <div className="row">
         <div className="col">
-          <li className="list-group-item" id="mealplannershopping">
+          <li className="list-group-item" id="dailymealplanner">
             <p className="dailymealplannerdescription"><strong>Use our Daily Meal Planner to organize your daily meals for the week!</strong></p>
             <h1>Daily Meal Planner</h1>
             <p>

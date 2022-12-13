@@ -20,13 +20,12 @@ export const Home = () => {
         </div>
         <div className="homedescription">
           <h3>
-            <p className="hometitle">Our main goal is to stop food waste!</p>
+            <p>Our main goal is to stop food waste!</p>
             <p className="homedescription2">
-              {" "}
               To achieve this, we will help your organize your food items at
               home. That will not only help you decrease food waste, but will
               make your life much easier, once you will know what items you have
-              at home, when they expire and what items you need to shop.
+              at home, when they expire and what items you need to shop to cook your meals.
             </p>
             <p>
               How do we help you organize your food items? A practical way is by

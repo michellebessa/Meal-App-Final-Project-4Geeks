@@ -1,0 +1,19 @@
+.barcodeinfo{
+    color:white;
+    margin-top:25%;
+}
+#pantryaccordion{
+  width: 50%;
+  margin:auto;
+  margin-top:5%;
+}
+.pantrylisttitle{
+  text-align:center;
+  background-color:white;
+  margin:0px;
+  
+}
+.accordion-header{
+  border-radius:0px;
+  border-color:white;
+}

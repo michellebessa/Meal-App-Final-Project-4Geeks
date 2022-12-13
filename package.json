@@ -73,6 +73,7 @@
 		]
 	},
 	"dependencies": {
+		"@mobiscroll/react": "https://npm.mobiscroll.com/@mobiscroll/react-trial/-/react-trial-5.20.0.tgz",
 		"bootstrap": "^5.2.3",
 		"prop-types": "^15.6.1",
 		"react": "^16.8.4",

@@ -8,7 +8,7 @@ import { Navbar } from "./component/navbar";
 import { Home } from "./pages/home";
 import { FoodCategories } from "./pages/foodcategories";
 import { MealPlannerShopping } from "./pages/mealplannershopping";
-import { PantryScan } from "./pages/pantryscan";
+import { Pantry } from "./pages/pantry";
 import { Recipes } from "./pages/recipes";
 import { ContactUs } from "./pages/contactus";
 import { Login } from "./component/login";
@@ -34,7 +34,7 @@ const Layout = () => {
               <Route element={<Home />} path="/" />
               <Route element={<FoodCategories />} path="/foodcategories" />
               <Route element={<MealPlannerShopping />} path="/mealplannershopping" />
-              <Route element={<PantryScan />} path="/pantryscan" />
+              <Route element={<Pantry />} path="/pantry" />
               <Route element={<Recipes />} path="/recipes" />
               <Route element={<ContactUs />} path="/contactus" />
               <Route element={<Login />} path="/login" />

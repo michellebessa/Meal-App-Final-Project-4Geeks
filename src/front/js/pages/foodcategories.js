@@ -33,8 +33,7 @@ export const FoodCategories = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <div className="container">
-      <div className="expiration2">
+    <div className="container text-center" id="foodcategories">
         <h1>
           <strong className="foodcategoriestitle">Food Categories</strong>
         </h1>
@@ -42,12 +41,13 @@ export const FoodCategories = () => {
           <strong>
             Click on "Learn More" to find what each food category means and what
             food items belong to each. That will help you organize all
-            the pantry items in your kitchen, listing each in the category that it belongs to.
+            the pantry items in your kitchen, listing each in the category that
+            it belongs to.
           </strong>
         </p>
 
         <div className="container text-center">
-          <div className="row">
+          <div className="row" id="foodcategoriesrow">
             <div className="col">
               <li className="list-group-item" id="foodcategories">
                 <h2>Healthy Fat</h2>
@@ -159,9 +159,6 @@ export const FoodCategories = () => {
               </li>
             </div>
           </div>
-        </div>
-
-        <div className="container text-center">
           <div className="row">
             <div className="col">
               <li className="list-group-item" id="foodcategories">
@@ -263,7 +260,6 @@ export const FoodCategories = () => {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 };

@@ -1,8 +1,8 @@
 .navbar {
     background-color: #aa8b56;
-    margin-bottom: 30px;
   }
 .navbar-brand {
   color: black;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-left:0px;
 }

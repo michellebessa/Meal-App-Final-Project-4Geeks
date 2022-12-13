@@ -1,5 +1,4 @@
 .contactus {
-    border: 1px solid black;
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 5%;
@@ -16,6 +15,7 @@
   }
   .contactustittle {
     margin-top: 3%;
+    color:white;
   }
   .contactusinfo {
     color: white;

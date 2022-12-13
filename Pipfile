@@ -21,6 +21,8 @@ argon2-cffi = "*"
 jwt = "*"
 pyjwt = "*"
 flask-jwt-extended = "*"
+requests = "*"
+jsonpickle = "*"
 
 [requires]
 python_version = "3.8"

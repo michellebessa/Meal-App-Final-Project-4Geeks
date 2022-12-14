@@ -55,7 +55,7 @@ export const Recipes = () => {
                   <RecipesModal modalid="maintenancemodal">
                     <h2>Maintenance</h2>
                     Eating at maintenance means that the calories you eat are
-                    roughly equivalent to the calories you expend, meaning you
+                    roughly equivalent to the calories you spend, meaning you
                     are eating enough to neither gain or lose weight.
                     Bulk/Surplus:
                   </RecipesModal>

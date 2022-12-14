@@ -4,8 +4,8 @@ import { mealPlannerApi, mealShopApi } from "../component/api";
 import { Context } from "../store/appContext";
 import { WeekDay, DailyMealPlanning } from "./codecleaner.js";
 import "../../styles/mealplannershopping.css";
-import '@mobiscroll/react/dist/css/mobiscroll.min.css';
-import { Datepicker, Button, Page, setOptions } from '@mobiscroll/react';
+import "@mobiscroll/react/dist/css/mobiscroll.min.css";
+import { Datepicker, Button, Page, setOptions } from "@mobiscroll/react";
 
 export const MealPlannerShopping = () => {
   const { store, actions } = useContext(Context);
@@ -30,6 +30,8 @@ export const MealPlannerShopping = () => {
   const [vegetablesInput, setVegetablesInput] = useState("");
   const [fruits, setFruits] = useState([]);
   const [fruitsInput, setFruitsInput] = useState("");
+  const [all, setAll] = useState([]);
+  const [allInput, setAllInput] = useState("");
   // Here are the hooks for the days of the week
   const [day, setDay] = useState("Select Week Day");
   const [dayShop, setDayShop] = useState("Select Week Day");
@@ -58,6 +60,7 @@ export const MealPlannerShopping = () => {
     grainscarbohydrates1,
     vegetables1,
     fruits1,
+    all1,
     dayshop1
   ) => {
     const data = {
@@ -68,6 +71,7 @@ export const MealPlannerShopping = () => {
       grainscarbohydrates: grainscarbohydrates1,
       vegetables: vegetables1,
       fruits: fruits1,
+      all: all1,
     };
 
     return (
@@ -78,6 +82,7 @@ export const MealPlannerShopping = () => {
       setGrainscarbohydrates([]),
       setVegetables([]),
       setFruits([]),
+      setAll([]),
       setDayShop(["Select Week Day"])
     );
   };
@@ -98,6 +103,7 @@ export const MealPlannerShopping = () => {
       ]);
       setVegetables([...vegetables, vegetablesInput]);
       setFruits([...fruits, fruitsInput]);
+      setAll([...all, allInput])
     }
     //Here are the handleSubmit for the weekly meals accordion
     else if (meal == "breakfast" && breakfastInput) {
@@ -131,6 +137,9 @@ export const MealPlannerShopping = () => {
     } else if (meal == "fruits" && fruitsInput) {
       setFruits([...fruits, fruitsInput]);
       setFruitsInput("");
+    } else if (meal == "all" && allInput) {
+      setAll([...all, allInput]);
+      setAllInput("");
     }
   };
   return (
@@ -138,42 +147,17 @@ export const MealPlannerShopping = () => {
       <div className="row">
         <div className="col">
           <li className="list-group-item" id="dailymealplanner">
-            <p className="dailymealplannerdescription"><strong>Use our Daily Meal Planner to organize your daily meals for the week!</strong></p>
+            <p className="dailymealplannerdescription">
+              <strong>
+                Use our Daily Meal Planner to organize your daily meals!
+              </strong>
+            </p>
             <h1>Daily Meal Planner</h1>
             <p>
-              <div className="dropdown">
-                <button
-                  className="btn btn-secondary dropdown-toggle"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  {day ? day : "Select Week Day"}
-                </button>
-                <ul className="dropdown-menu">
-                  <li onClick={() => setDay("Monday")}>
-                    <WeekDay day="Monday" />
-                  </li>
-                  <li onClick={() => setDay("Tuesday")}>
-                    <WeekDay day="Tuesday" />
-                  </li>
-                  <li onClick={() => setDay("Wednesday")}>
-                    <WeekDay day="Wednesday" />
-                  </li>
-                  <li onClick={() => setDay("Thursday")}>
-                    <WeekDay day="Thursday" />
-                  </li>
-                  <li onClick={() => setDay("Friday")}>
-                    <WeekDay day="Friday" />
-                  </li>
-                  <li onClick={() => setDay("Saturday")}>
-                    <WeekDay day="Saturday" />
-                  </li>
-                  <li onClick={() => setDay("Sunday")}>
-                    <WeekDay day="Sunday" />
-                  </li>
-                </ul>
-              </div>
+              <h4>
+                <i class="fas fa-calendar"></i>
+                <input type="date"></input>
+              </h4>
             </p>
             <div className="accordion" id="accordionPanelsStayOpenExample">
               <DailyMealPlanning mealid="Breakfast">
@@ -261,43 +245,17 @@ export const MealPlannerShopping = () => {
         </div>
         <div className="col">
           <li className="list-group-item" id="mealplannershopping">
-          <p className="dailymealplannerdescription"><strong>Use our Shopping List to write items that you need to shop to cook your weekly meals!</strong></p>
-            <h1>Shopping List</h1>
-            <p>
-              <div className="dropdown">
-                <button
-                  className="btn btn-secondary dropdown-toggle"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  {dayShop ? dayShop : "Select Week Day"}
-                </button>
-                <ul className="dropdown-menu">
-                  <li onClick={() => setDayShop("Monday")}>
-                    <WeekDay day="Monday" />
-                  </li>
-                  <li onClick={() => setDayShop("Tuesday")}>
-                    <WeekDay day="Tuesday" />
-                  </li>
-                  <li onClick={() => setDayShop("Wednesday")}>
-                    <WeekDay day="Wednesday" />
-                  </li>
-                  <li onClick={() => setDayShop("Thursday")}>
-                    <WeekDay day="Thursday" />
-                  </li>
-                  <li onClick={() => setDayShop("Friday")}>
-                    <WeekDay day="Friday" />
-                  </li>
-                  <li onClick={() => setDayShop("Saturday")}>
-                    <WeekDay day="Saturday" />
-                  </li>
-                  <li onClick={() => setDayShop("Sunday")}>
-                    <WeekDay day="Sunday" />
-                  </li>
-                </ul>
-              </div>
+            <p className="dailymealplannerdescription">
+              <strong>
+                Use our Shopping List to write items that you need to shop to
+                cook your daily meals!
+              </strong>
             </p>
+            <h1>Shopping List</h1>
+            <h4>
+              <i class="fas fa-calendar"></i>
+              <input type="date"></input>
+            </h4>
             <div className="accordion" id="accordionPanelsStayOpenExample">
               <DailyMealPlanning mealid="Healthy-Fat">
                 <form
@@ -443,6 +401,30 @@ export const MealPlannerShopping = () => {
                   );
                 })}
               </DailyMealPlanning>
+              <DailyMealPlanning mealid="All">
+                <form
+                  onSubmit={(event) => {
+                    event.preventDefault();
+                    handleSubmit(event, "all");
+                  }}
+                >
+                  <input
+                    className="inputmealplanner"
+                    placeholder="Add an item to your list"
+                    value={allInput}
+                    onChange={(event) => {
+                      setAllInput(event.target.value);
+                    }}
+                  ></input>
+                </form>
+                {all.map((meal) => {
+                  return (
+                    <ul className="m-0">
+                      <li id="mealmap">{meal}</li>
+                    </ul>
+                  );
+                })}
+              </DailyMealPlanning>
               <button
                 className="mt-2"
                 onClick={() =>
@@ -453,6 +435,7 @@ export const MealPlannerShopping = () => {
                     grainscarbohydrates,
                     vegetables,
                     fruits,
+                    all,
                     dayShop
                   )
                 }

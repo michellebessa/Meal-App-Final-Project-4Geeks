@@ -3,6 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
       user: [],
+      recipes: [],
       message: null,
       demo: [
         {
@@ -18,6 +19,41 @@ const getState = ({ getStore, getActions, setStore }) => {
       ],
     },
     actions: {
+      //HERE IS THE SPOONACULAR DATA FOR THE RECIPES
+      getRecipeData: (ingredient) => {
+        fetch(
+          `https://api.spoonacular.com/recipes/complexSearch${
+            getStore().key
+          }&&titleMatch=${ingredient}`
+        )
+          .then((response) => response.json())
+          .then((responseAsJson) => {
+            setStore({ complex: responseAsJson.results });
+            console.log("These are my recipes", getStore().complex);
+          })
+          .catch((error) => {
+            console.log("Looks like there was a problem: \n", error);
+          });
+      },
+
+      findByNutrients: (carbs, proteins) => {
+        fetch(
+          `https://api.spoonacular.com/recipes/complexSearch${
+            getStore().key
+          }&maxCarbs=${carbs}&minProteins=${proteins}`
+        )
+          .then((response) => response.json())
+          .then((responseAsJson) => {
+            setStore({ complex: responseAsJson.results });
+            console.log("These are my recipes", getStore().complex);
+          })
+          .catch((error) => {
+            console.log("Looks like there was a problem: \n", error);
+          });
+      },
+
+
+      //HERE IS THE REGISTER DATA
       register: (data) => {
         const store = getStore();
         fetch(`${process.env.BACKEND_URL}/api/register`, {

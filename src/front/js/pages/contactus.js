@@ -104,8 +104,8 @@ export const ContactUs = () => {
               <i className="contactus4 fas fa-map-marker-alt fa-2x" />
               <p>Miami Beach, FL 33139, USA</p>
               <p>Homestead, FL 33032, USA</p>
-              <p>Burleson, TX 76028, USA</p>
               <p>West Palm Beach, FL 33401, USA</p>
+              <p>Burleson, TX 76028, USA</p>
             </li>
 
             <li>

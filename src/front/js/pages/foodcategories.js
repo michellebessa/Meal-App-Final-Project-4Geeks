@@ -51,7 +51,7 @@ export const FoodCategories = () => {
           <div className="col">
             <li className="list-group-item" id="foodcategories">
               <h2>Healthy Fat</h2>
-              <img src={HealthyFat} />
+              <img className="image" src={HealthyFat} />
               <button
                 type="button"
                 className="btn"
@@ -87,7 +87,7 @@ export const FoodCategories = () => {
           <div className="col">
             <li className="list-group-item" id="foodcategories">
               <h2>Protein</h2>
-              <img src={Protein} />
+              <img className="image" src={Protein} />
               <button
                 type="button"
                 className="btn"
@@ -126,7 +126,7 @@ export const FoodCategories = () => {
           <div className="col">
             <li className="list-group-item" id="foodcategories">
               <h2>Dairy</h2>
-              <img src={Dairy} />
+              <img className="image" src={Dairy} />
               <button
                 type="button"
                 className="btn"
@@ -162,7 +162,7 @@ export const FoodCategories = () => {
           <div className="col">
             <li className="list-group-item" id="foodcategories">
               <h2>Grains/Carbohydrates</h2>
-              <img src={GrainsCarbohydrates} />
+              <img className="image" src={GrainsCarbohydrates} />
               <button
                 type="button"
                 className="btn"
@@ -195,7 +195,7 @@ export const FoodCategories = () => {
           <div className="col">
             <li className="list-group-item" id="foodcategories">
               <h2>Vegetables</h2>
-              <img src={Vegetables} />
+              <img className="image" src={Vegetables} />
               <button
                 type="button"
                 className="btn"
@@ -228,7 +228,7 @@ export const FoodCategories = () => {
           <div className="col">
             <li className="list-group-item" id="foodcategories">
               <h2>Fruits</h2>
-              <img src={Fruits} />
+              <img className="image" src={Fruits} />
               <button
                 type="button"
                 className="btn"

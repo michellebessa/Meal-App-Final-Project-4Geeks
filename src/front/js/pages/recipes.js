@@ -28,6 +28,8 @@ export const Recipes = () => {
   const [recipes, setRecipes] = useState();
   const [diet, setDiet] = useState("*");
 
+  console.log("hello", store);
+
   function getRecipes() {
     fetch(
       `https://api.spoonacular.com/recipes/complexSearch/diet=${diet}?apiKey=0ed22b6105b2418e80a5af8d0f8a2353`
@@ -51,184 +53,131 @@ export const Recipes = () => {
             <h1>Recipes</h1>
             <p></p>
             <div className="accordion" id="accordionPanelsStayOpenExample">
-              {/* <DailyMealPlanning mealid="Maintenance">
-                <row>
-                  <button
-                    type="button"
-                    className="btn"
-                    data-bs-toggle="modal"
-                    data-bs-target="#maintenancemodal"
-                  >
-                    <i className="fas fa-utensils"></i> Learn More
-                  </button>
-                  <button type="button" className="btn">
-                    <i className="fas fa-plus" id="recipesicon"></i>Add recipe
-                    to list
-                  </button>
-                  <button type="button" className="btn">
-                    <i className="fas fa-pen-alt" id="recipesicon"></i>Types of
-                    Cuisine
-                  </button>
-                  <RecipesModal modalid="maintenancemodal">
-                    <h2>Maintenance</h2>
-                    Eating at maintenance means that the calories you eat are
-                    roughly equivalent to the calories you spend, meaning you
-                    are eating enough to neither gain or lose weight.
-                    Bulk/Surplus:
-                  </RecipesModal>
-                </row>
-              </DailyMealPlanning> */}
-              {/* <DailyMealPlanning mealid="Bulk/Surplus">
-                <row>
-                  <button
-                    type="button"
-                    className="btn"
-                    data-bs-toggle="modal"
-                    data-bs-target="#bulksurplusmodal"
-                  >
-                    <i className="fas fa-utensils"></i> Learn More
-                  </button>
-                  <button type="button" className="btn">
-                    <i className="fas fa-plus" id="recipesicon"></i>Add recipe
-                    to list
-                  </button>
-                  <button type="button" className="btn">
-                    <i className="fas fa-pen-alt" id="recipesicon"></i>Types of
-                    Cuisine
-                  </button>
-                  <RecipesModal modalid="bulksurplusmodal">
-                    <h2>Bulk/Surplus</h2>A calorie surplus/bulk is consuming an
-                    added amount of daily calories when adding resistance
-                    training to boost muscle and strength gains.
-                  </RecipesModal>
-                </row>
-              </DailyMealPlanning> */}
               <DailyMealPlanning mealid="Keto">
-                <row>
-                  <button
-                    type="button"
-                    className="btn"
-                    data-bs-toggle="modal"
-                    data-bs-target="#ketomodal"
-                  >
-                    <i className="fas fa-utensils"></i> Learn More
-                  </button>
-                  <div
-                    id="carouselExampleControls"
-                    className="carousel slide"
-                    data-bs-ride="carousel"
-                  >
-                    <div className="carousel-inner">
-                      <div className="carousel-item active">
-                        <img
-                          src="https://c4.wallpaperflare.com/wallpaper/373/952/839/wooden-spoon-condiments-background-wallpaper-preview.jpg"
-                          className="d-block w-100"
-                          alt="..."
-                        />
-                      </div>
-                      <div className="carousel-item">
-                        <img
-                          src="https://c4.wallpaperflare.com/wallpaper/373/952/839/wooden-spoon-condiments-background-wallpaper-preview.jpg"
-                          className="d-block w-100"
-                          alt="..."
-                        />
-                      </div>
-                      <div className="carousel-item">
-                        <img
-                          src="https://c4.wallpaperflare.com/wallpaper/373/952/839/wooden-spoon-condiments-background-wallpaper-preview.jpg"
-                          className="d-block w-100"
-                          alt="..."
-                        />
-                      </div>
+                <button
+                  type="button"
+                  className="btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#ketomodal"
+                >
+                  <i className="fas fa-utensils"></i> Learn More
+                </button>
+                <div
+                  id="carouselExampleControls"
+                  className="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div className="carousel-inner">
+                    <div className="carousel-item active">
+                      {store.complex.map((item, index) => {
+                        return (
+                          <div key={item.id}>
+                            <img
+                              src={item.image}
+                              className="d-block w-50 h-40 m-auto"
+                              alt="..."
+                            />
+                            {item.title}
+                          </div>
+                        );
+                      })}
                     </div>
-                    <button
-                      className="carousel-control-prev"
-                      type="button"
-                      data-bs-target="#carouselExampleControls"
-                      data-bs-slide="prev"
-                    >
-                      <span
-                        className="carousel-control-prev-icon"
-                        aria-hidden="true"
-                      ></span>
-                      <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button
-                      className="carousel-control-next"
-                      type="button"
-                      data-bs-target="#carouselExampleControls"
-                      data-bs-slide="next"
-                    >
-                      <span
-                        className="carousel-control-next-icon"
-                        aria-hidden="true"
-                      ></span>
-                      <span className="visually-hidden">Next</span>
-                    </button>
+                    <div className="carousel-item">
+                      <img
+                        src="https://c4.wallpaperflare.com/wallpaper/373/952/839/wooden-spoon-condiments-background-wallpaper-preview.jpg"
+                        className="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div className="carousel-item">
+                      <img
+                        src="https://c4.wallpaperflare.com/wallpaper/373/952/839/wooden-spoon-condiments-background-wallpaper-preview.jpg"
+                        className="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
                   </div>
+                  <button
+                    className="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      className="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span className="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    className="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      className="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span className="visually-hidden">Next</span>
+                  </button>
+                </div>
 
-                  <RecipesModal modalid="ketomodal">
-                    <h2>Keto</h2>The ketogenic diet is a high-fat,
-                    adequate-protein, low-carbohydrate dietary therapy. The diet
-                    forces the body to burn fats rather than carbohydrates.
-                  </RecipesModal>
-                </row>
+                <RecipesModal modalid="ketomodal">
+                  <h2>Keto</h2>The ketogenic diet is a high-fat,
+                  adequate-protein, low-carbohydrate dietary therapy. The diet
+                  forces the body to burn fats rather than carbohydrates.
+                </RecipesModal>
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Vegetarian">
-                <row>
-                  <button
-                    type="button"
-                    className="btn"
-                    data-bs-toggle="modal"
-                    data-bs-target="#vegetarianmodal"
-                  >
-                    <i className="fas fa-utensils"></i> Learn More
-                  </button>
-                  <RecipesModal modalid="vegetarianmodal">
-                    <h2>Vegetarian</h2>
-                    Vegetarian cuisine is based on food that meets vegetarian
-                    standards by not including meat and animal tissue products
-                    (such as gelatin or animal-derived rennet).
-                  </RecipesModal>
-                </row>
+                <button
+                  type="button"
+                  className="btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#vegetarianmodal"
+                >
+                  <i className="fas fa-utensils"></i> Learn More
+                </button>
+                <RecipesModal modalid="vegetarianmodal">
+                  <h2>Vegetarian</h2>
+                  Vegetarian cuisine is based on food that meets vegetarian
+                  standards by not including meat and animal tissue products
+                  (such as gelatin or animal-derived rennet).
+                </RecipesModal>
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Pescatarian">
-                <row>
-                  <button
-                    type="button"
-                    className="btn"
-                    data-bs-toggle="modal"
-                    data-bs-target="#pescatarianmodal"
-                  >
-                    <i className="fas fa-utensils"></i> Learn More
-                  </button>
-                  <RecipesModal modalid="pescatarianmodal">
-                    <h2>Pescatarian</h2>
-                    Pescatarians have a lot in common with vegetarians. They eat
-                    fruits, veggies, nuts, seeds, whole grains, beans, eggs, and
-                    dairy, and stay away from meat and poultry. But there's one
-                    way they part company from vegetarians: Pescatarians eat
-                    fish and other seafood.
-                  </RecipesModal>
-                </row>
+                <button
+                  type="button"
+                  className="btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#pescatarianmodal"
+                >
+                  <i className="fas fa-utensils"></i> Learn More
+                </button>
+                <RecipesModal modalid="pescatarianmodal">
+                  <h2>Pescatarian</h2>
+                  Pescatarians have a lot in common with vegetarians. They eat
+                  fruits, veggies, nuts, seeds, whole grains, beans, eggs, and
+                  dairy, and stay away from meat and poultry. But there's one
+                  way they part company from vegetarians: Pescatarians eat fish
+                  and other seafood.
+                </RecipesModal>
               </DailyMealPlanning>
               <DailyMealPlanning mealid="Vegan">
-                <row>
-                  <button
-                    type="button"
-                    className="btn"
-                    data-bs-toggle="modal"
-                    data-bs-target="#veganmodal"
-                  >
-                    <i className="fas fa-utensils"></i> Learn More
-                  </button>
-                  <RecipesModal modalid="veganmodal">
-                    <h2>Vegan</h2>A vegan diet is based on plants (such as
-                    vegetables, grains, nuts and fruits) and foods made from
-                    plants. Vegans do not eat foods that come from animals,
-                    including dairy products and eggs.
-                  </RecipesModal>
-                </row>
+                <button
+                  type="button"
+                  className="btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#veganmodal"
+                >
+                  <i className="fas fa-utensils"></i> Learn More
+                </button>
+                <RecipesModal modalid="veganmodal">
+                  <h2>Vegan</h2>A vegan diet is based on plants (such as
+                  vegetables, grains, nuts and fruits) and foods made from
+                  plants. Vegans do not eat foods that come from animals,
+                  including dairy products and eggs.
+                </RecipesModal>
               </DailyMealPlanning>
             </div>
           </li>

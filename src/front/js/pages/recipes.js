@@ -25,6 +25,23 @@ const RecipesModal = (props) => {
 
 export const Recipes = () => {
   const { store, actions } = useContext(Context);
+  const [recipes, setRecipes] = useState();
+  const [diet, setDiet] = useState("*");
+
+  function getRecipes() {
+    fetch(
+      `https://api.spoonacular.com/recipes/complexSearch/diet=${diet}?apiKey=0ed22b6105b2418e80a5af8d0f8a2353`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setRecipes(data);
+        console.log(data);
+        console.log(diet);
+      })
+      .catch(() => {
+        console.log("error");
+      });
+  }
 
   return (
     <div className="mt-5">
@@ -34,7 +51,7 @@ export const Recipes = () => {
             <h1>Recipes</h1>
             <p></p>
             <div className="accordion" id="accordionPanelsStayOpenExample">
-              <DailyMealPlanning mealid="Maintenance">
+              {/* <DailyMealPlanning mealid="Maintenance">
                 <row>
                   <button
                     type="button"
@@ -60,8 +77,8 @@ export const Recipes = () => {
                     Bulk/Surplus:
                   </RecipesModal>
                 </row>
-              </DailyMealPlanning>
-              <DailyMealPlanning mealid="Bulk/Surplus">
+              </DailyMealPlanning> */}
+              {/* <DailyMealPlanning mealid="Bulk/Surplus">
                 <row>
                   <button
                     type="button"
@@ -85,7 +102,7 @@ export const Recipes = () => {
                     training to boost muscle and strength gains.
                   </RecipesModal>
                 </row>
-              </DailyMealPlanning>
+              </DailyMealPlanning> */}
               <DailyMealPlanning mealid="Keto">
                 <row>
                   <button
@@ -96,14 +113,60 @@ export const Recipes = () => {
                   >
                     <i className="fas fa-utensils"></i> Learn More
                   </button>
-                  <button type="button" className="btn">
-                    <i className="fas fa-plus" id="recipesicon"></i>Add recipe
-                    to list
-                  </button>
-                  <button type="button" className="btn">
-                    <i className="fas fa-pen-alt" id="recipesicon"></i>Types of
-                    Cuisine
-                  </button>
+                  <div
+                    id="carouselExampleControls"
+                    className="carousel slide"
+                    data-bs-ride="carousel"
+                  >
+                    <div className="carousel-inner">
+                      <div className="carousel-item active">
+                        <img
+                          src="https://c4.wallpaperflare.com/wallpaper/373/952/839/wooden-spoon-condiments-background-wallpaper-preview.jpg"
+                          className="d-block w-100"
+                          alt="..."
+                        />
+                      </div>
+                      <div className="carousel-item">
+                        <img
+                          src="https://c4.wallpaperflare.com/wallpaper/373/952/839/wooden-spoon-condiments-background-wallpaper-preview.jpg"
+                          className="d-block w-100"
+                          alt="..."
+                        />
+                      </div>
+                      <div className="carousel-item">
+                        <img
+                          src="https://c4.wallpaperflare.com/wallpaper/373/952/839/wooden-spoon-condiments-background-wallpaper-preview.jpg"
+                          className="d-block w-100"
+                          alt="..."
+                        />
+                      </div>
+                    </div>
+                    <button
+                      className="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#carouselExampleControls"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        className="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                      className="carousel-control-next"
+                      type="button"
+                      data-bs-target="#carouselExampleControls"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        className="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span className="visually-hidden">Next</span>
+                    </button>
+                  </div>
+
                   <RecipesModal modalid="ketomodal">
                     <h2>Keto</h2>The ketogenic diet is a high-fat,
                     adequate-protein, low-carbohydrate dietary therapy. The diet
@@ -120,14 +183,6 @@ export const Recipes = () => {
                     data-bs-target="#vegetarianmodal"
                   >
                     <i className="fas fa-utensils"></i> Learn More
-                  </button>
-                  <button type="button" className="btn">
-                    <i className="fas fa-plus" id="recipesicon"></i>Add recipe
-                    to list
-                  </button>
-                  <button type="button" className="btn">
-                    <i className="fas fa-pen-alt" id="recipesicon"></i>Types of
-                    Cuisine
                   </button>
                   <RecipesModal modalid="vegetarianmodal">
                     <h2>Vegetarian</h2>
@@ -146,14 +201,6 @@ export const Recipes = () => {
                     data-bs-target="#pescatarianmodal"
                   >
                     <i className="fas fa-utensils"></i> Learn More
-                  </button>
-                  <button type="button" className="btn">
-                    <i className="fas fa-plus" id="recipesicon"></i>Add recipe
-                    to list
-                  </button>
-                  <button type="button" className="btn">
-                    <i className="fas fa-pen-alt" id="recipesicon"></i>Types of
-                    Cuisine
                   </button>
                   <RecipesModal modalid="pescatarianmodal">
                     <h2>Pescatarian</h2>
@@ -174,14 +221,6 @@ export const Recipes = () => {
                     data-bs-target="#veganmodal"
                   >
                     <i className="fas fa-utensils"></i> Learn More
-                  </button>
-                  <button type="button" className="btn">
-                    <i className="fas fa-plus" id="recipesicon"></i>Add recipe
-                    to list
-                  </button>
-                  <button type="button" className="btn">
-                    <i className="fas fa-pen-alt" id="recipesicon"></i>Types of
-                    Cuisine
                   </button>
                   <RecipesModal modalid="veganmodal">
                     <h2>Vegan</h2>A vegan diet is based on plants (such as

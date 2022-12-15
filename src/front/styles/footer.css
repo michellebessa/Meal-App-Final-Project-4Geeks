@@ -5,3 +5,96 @@
 .footername{
 text-align:center;
 }
+
+/* .navbar {
+    background-color: #aa8b56;
+  }
+  .navButton {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    float: right;
+    margin-left: 150px;
+  }
+  .div1 {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+  .button-83 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #2b4e1b;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+      5px 5px 0px 0px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+  }
+  .button-83:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+  }
+  @media (min-width: 768px) {
+    .button-83 {
+      padding: 0.25em 0.75em;
+    }
+  } */
+
+  /* export const Navbar = () => {
+    const navigate = useNavigate();
+    let token = sessionStorage.getItem("token");
+    function handleLogOut() {
+      sessionStorage.clear();
+      navigate("/");
+    }
+  
+    return (
+      <nav className="navbar navbar-light">
+        <div className="navButton">
+          <Button className="button-83" as={Link} to="/">
+            Meal It!
+          </Button>
+  
+          <Button className="button-83" as={Link} to="/foodcategories">
+            Food Categories
+          </Button>
+  
+          <Button className="button-83" as={Link} to="/pantry">
+            Pantry
+          </Button>
+  
+          <Button className="button-83" as={Link} to="/mealplannershopping">
+            Meal Planner/Shopping List
+          </Button>
+  
+          <Button className="button-83" as={Link} to="/recipes">
+            Recipes
+          </Button>
+  
+          <Button className="button-83" as={Link} to="/contactus">
+            Contact Us
+          </Button>
+  
+          {sessionStorage.getItem("token") ? (
+            <Button className="button-83" onClick={handleLogOut}>
+              Logout
+            </Button>
+          ) : (
+            <Button className="button-83" as={Link} to="/login">
+              Login
+            </Button>
+          )}
+        </div>
+      </nav>
+    );
+  }; */
+  

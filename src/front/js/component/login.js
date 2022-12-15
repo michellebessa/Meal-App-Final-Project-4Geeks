@@ -1,64 +1,80 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
-import { Link } from "react-router-dom";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import "../../styles/login.css";
+import { useNavigate, Link } from "react-router-dom";
 
 export const Login = () => {
   const { store, actions } = useContext(Context);
-
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  console.log("This is your token", store.token);
+  
+  const handleClick = () => {
+    actions.login(email, password);
+  };
+  if (store.token && store.token != "" && store.token != undefined) {
+    navigate("/");
+  }
   return (
-    <div>
-      <form className="loginpage mt-5">
-        <div className="mb-3">
-          <h1>Login</h1>
-          <label for="exampleInputEmail1" className="form-label">
-            Email address
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
-          <div id="emailHelp" className="form-text">
-            We'll never share your email with anyone else.
+    <div className="text-center my-5">
+      {store.token && store.token != "" && store.token != undefined ? (
+        "You are logged in with this token" + store.token
+      ) : (
+        <div className="container-fluid">
+          <div className="row d-flex main-content text-center w-50 rounded shadow-lg my-5 mx-auto p-4">
+            <div className="col-md-8 col-xs-12 col-sm-12 login-form mx-auto bg-white rounded">
+              <div className="container-fluid">
+                <div className="row justify-content-center">
+                  <h1 className="font-weight-light">Login</h1>
+                </div>
+                <div className="row justify-content-center"></div>
+                <form
+                  // onChange={(e) => onChange(e.target)}
+                  // onSubmit={handleClick}
+                  control=""
+                  className="form-group p-2 w-100"
+                >
+                  <div className="row justify-content-center mt-2">
+                    <input
+                      type="text"
+                      name="email"
+                      value={email}
+                      id="email"
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="form__input border-top-0 border-left-0 border-right-0 border-bottom w-100 pt-2"
+                      placeholder="Email Address"
+                    />
+                  </div>
+                  <div className="row justify-content-center mt-2">
+                    <input
+                      type="password"
+                      value={password}
+                      name="password"
+                      id="password"
+                      onChange={(e) => setPassword(e.target.value)}
+                      className="form__input border-top-0 border-left-0 border-right-0 border-bottom w-100 pt-2"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div className="row justify-content-center mt-4">
+                    <input
+                      onClick={handleClick}
+                      type="button"
+                      value="Login"
+                      className="btn-primary rounded w-100 border-0 py-2"
+                    />
+                  </div>
+                </form>
+              </div>
+              <div className="row justify-content-center">
+                <p>
+                  Don't have an account? <Link to="/createaccount">Signup here</Link>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="mb-3">
-          <label for="exampleInputPassword1" className="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            className="form-control"
-            id="exampleInputPassword1"
-          />
-          <button type="submit" className="btnlogin btn">
-            I forgot my password
-          </button>
-        </div>
-        <div className="mb-3 form-check">
-          <input
-            type="checkbox"
-            className="form-check-input"
-            id="exampleCheck1"
-          />
-          <label className="form-check-label" for="exampleCheck1">
-            Remember login
-          </label>
-        </div>
-        <button type="submit" className="btnlogin btn">
-          Submit
-        </button>
-
-        <Link to="/createaccount">
-          <button type="submit" className="btnlogin btn">
-            Create an account
-          </button>
-        </Link>
-      </form>
+      )}
     </div>
   );
 };

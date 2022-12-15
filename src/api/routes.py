@@ -66,6 +66,28 @@ def get_all_users():
     return jsonify(users_array), 200
 
 
+@api.route("/login", methods=["POST"])
+def login():
+    email = request.json.get("email", None)
+    password = request.json.get("password", None)
+    # if email != "test" or password != "test":
+    #     return jsonify({"msg": "Bad email or password"}), 401
+    user = User.query.filter_by(email=email, password=password).first()
+    if not user:
+        return jsonify({"msg": "Bad email or password"}), 401
+    access_token = create_access_token(
+        identity=user.email, expires_delta=datetime.timedelta(minutes=60))
+    return jsonify(access_token=access_token)
+
+
+@api.route("/protected", methods=["GET"])
+@jwt_required()
+def protected():
+    # Access the identity of the current user with get_jwt_identity
+    current_user = get_jwt_identity()
+    return jsonify(logged_in_as=current_user), 200
+
+
 @api.route('/mealplanner', methods=['POST'])
 def meal_planner():
     body = request.json

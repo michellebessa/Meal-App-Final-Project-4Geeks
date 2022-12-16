@@ -137,6 +137,9 @@ export const Pantry = () => {
           <div className="accordion-body mb-4 mt-3" id="pantryplaceholder2">
             <input placeholder="Enter expiration date" />
           </div>
+          <div>
+            <button className="pantrysavebutton">Save</button>
+          </div>
         </div>
       </div>
 
@@ -169,7 +172,6 @@ export const Pantry = () => {
               type="button"
               data-bs-toggle="modal"
               data-bs-target="#pantryscanmodal"
-              // onClick={BarcodeScannerComponent}
             >
               <i className="fas fa-barcode"></i> Click here to scan an item
               <BarcodeScannerComponent
@@ -181,13 +183,10 @@ export const Pantry = () => {
               />
               <p>{barcode}</p>
             </button>
-            <img className="barcodeimg" src={PantryScanImg} />
-
             <PantryModal modalid="pantryscanmodal">
               <p>
                 <strong>
-                  As soon as this modal opens, the computer will ask permission
-                  to access my camera, so I can scan an item barcode.
+                  <img className="barcodeimg" src={PantryScanImg} />
                 </strong>
               </p>
             </PantryModal>

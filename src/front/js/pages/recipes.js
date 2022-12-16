@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { DailyMealPlanning } from "./codecleaner.js";
 import "../../styles/recipes.css";
@@ -39,21 +39,7 @@ export const Recipes = () => {
   const handleSelect = (selectIndex, i) => {
     setIndex(selectIndex);
   };
-  // function getRecipes() {
-  //   fetch(
-  //     `https://api.spoonacular.com/recipes/complexSearch/diet=${diet}?apiKey=0ed22b6105b2418e80a5af8d0f8a2353`
-  //   )
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       setRecipes(data);
-  //       console.log(data);
-  //       console.log(diet);
-  //     })
-  //     .catch(() => {
-  //       console.log("error");
-  //     });
-  // }
-
+  
   return (
     <div className="mt-5">
       <div className="row">
@@ -76,7 +62,7 @@ export const Recipes = () => {
                   className="carousel slide"
                   data-bs-ride="carousel"
                 >
-                  <div className="carousel-inner w-50 h-40 m-auto">
+                  <div className="carousel-inner w-50 h-40 m-auto mb-0">
                     <div
                       className="carousel-item active"
                       onSelect={handleSelect}

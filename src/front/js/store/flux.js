@@ -32,7 +32,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       //HERE IS THE SPOONACULAR DATA FOR THE RECIPES
       getRecipeData: () => {
         fetch(
-          "https://api.spoonacular.com/recipes/complexSearch?apiKey=35aaf0fcff674e94b10b99b4e6c69a6b"
+          "https://api.spoonacular.com/recipes/complexSearch?apiKey=d907a1cd4b1a43b7bcc3af6eec726c71"
         )
           .then((response) => response.json())
           .then((responseAsJson) => {
@@ -46,7 +46,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
       getRecipeDetails: (id) => {
         fetch(
-          `https://api.spoonacular.com/recipes/${id}/information?apiKey=35aaf0fcff674e94b10b99b4e6c69a6b`
+          `https://api.spoonacular.com/recipes/${id}/information?apiKey=d907a1cd4b1a43b7bcc3af6eec726c71`
         )
           .then((response) => response.json())
           .then((responseAsJson) => {

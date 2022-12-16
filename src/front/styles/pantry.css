@@ -1,48 +1,62 @@
-#pantryaccordion{
+#pantryaccordion {
   width: 50%;
-  margin:auto;
-  margin-top:5%;
+  margin: auto;
+  margin-top: 5%;
 }
-.pantrylisttitle{
-  text-align:center;
-  background-color:white;
-  margin:0px;
-  
+.pantrylisttitle {
+  text-align: center;
+  background-color: white;
+  margin: 0px;
 }
-.accordion-header{
-  border-radius:0px;
-  border-color:white;
+.accordion-header {
+  border-radius: 0px;
+  border-color: white;
 }
-.itemname{
-  float:left;
+.itemname {
+  float: left;
 }
-.expirationdate{
-  color:red;
-  float:right;
+.expirationdate {
+  color: red;
+  float: right;
 }
-.accordion-body{
-  padding-top:0px;
-
-}.expirationdate2{
-  float:right;
-  color:rgb(231, 142, 39);
+.accordion-body {
+  padding-top: 0px;
+  color: #2b4e1b;
+  text-align: center;
+  margin-top: 5px;
 }
-.expirationdate3{
-  float:right;
+.expirationdate2 {
+  float: right;
+  color: rgb(231, 142, 39);
+}
+.expirationdate3 {
+  float: right;
   color: green;
 }
-.inputpantry{
-  width:50%;
+.inputpantry {
+  width: 50%;
 }
-.inputpantry1{
-  float:left;
+.inputpantry1 {
+  float: left;
 }
-.inputpantry2{
-  float:right;
+.inputpantry2 {
+  float: right;
 }
-#pantryplaceholder1{
-  float:left;
+#pantryplaceholder1 {
+  float: left;
 }
-#pantryplaceholder2{
-  float:right;
+#pantryplaceholder2 {
+  float: right;
+}
+.barcodeimg {
+  width: 150px;
+}
+.barcodebutton {
+  margin-left: 1%;
+  height: 40px;
+}
+.pantrysavebutton {
+  margin-top: 50px;
+  margin-bottom: 5px;
+  margin-left: 90px;
 }

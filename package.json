@@ -75,6 +75,7 @@
 	"dependencies": {
 		"@mobiscroll/react": "https://npm.mobiscroll.com/@mobiscroll/react-trial/-/react-trial-5.20.0.tgz",
 		"bootstrap": "^5.2.3",
+		"html-react-parser": "^3.0.4",
 		"prop-types": "^15.6.1",
 		"react": "^16.8.4",
 		"react-barcode-reader": "^0.0.2",

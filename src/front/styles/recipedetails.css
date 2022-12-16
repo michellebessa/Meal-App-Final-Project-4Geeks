@@ -1,0 +1,11 @@
+#cardrecipes {
+  margin: auto;
+  width: 50%;
+}
+.card-title {
+  color: green;
+  text-align: center;
+}
+.btm {
+  margin: auto;
+}

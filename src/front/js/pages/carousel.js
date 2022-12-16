@@ -7,13 +7,11 @@ export const CarouselSlide = ({ src, alt, isFirst, name, id }) => {
   const { store, actions } = useContext(Context);
   return (
     <div className={`carousel-item${isFirst ? " active" : ""}`}>
-      <h1>{name}</h1>
-      <img src={src} className="d-block w-100" alt={alt} />
-      <Link to={"/recipesdetails/" + id}>
+      <h1 className="mt-10">{name}</h1>
+      <img src={src} className="m-auto w-100 h-100 mb-0" alt={alt} />
+      <Link to={"/recipedetails/" + id}>
         <button
-          onClick={() => {
-            actions.getRecipeDetails(id);
-          }}
+          className="takemetorecipebutton"
         >
           Take me to recipe
         </button>

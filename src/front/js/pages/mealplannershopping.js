@@ -32,9 +32,6 @@ export const MealPlannerShopping = () => {
   const [fruitsInput, setFruitsInput] = useState("");
   const [all, setAll] = useState([]);
   const [allInput, setAllInput] = useState("");
-  // Here are the hooks for the days of the week
-  const [day, setDay] = useState("Select Week Day");
-  const [dayShop, setDayShop] = useState("Select Week Day");
 
   const submitMeal = (breakfast1, lunch1, dinner1, day1) => {
     const data = {
@@ -43,6 +40,7 @@ export const MealPlannerShopping = () => {
       lunch: lunch1,
       dinner: dinner1,
     };
+    console.log(all);
 
     return (
       mealPlannerApi(data),
@@ -103,7 +101,8 @@ export const MealPlannerShopping = () => {
       ]);
       setVegetables([...vegetables, vegetablesInput]);
       setFruits([...fruits, fruitsInput]);
-      setAll([...all, allInput])
+      setAll([...vegetables, vegetablesInput]);
+      console.log(all);
     }
     //Here are the handleSubmit for the weekly meals accordion
     else if (meal == "breakfast" && breakfastInput) {
@@ -142,6 +141,8 @@ export const MealPlannerShopping = () => {
       setAllInput("");
     }
   };
+  console.log(all);
+
   return (
     <div className="mt-5">
       <div className="row">
@@ -181,7 +182,7 @@ export const MealPlannerShopping = () => {
                 {breakfast.map((meal) => {
                   return (
                     <ul className="m-0">
-                      <li id="mealmap">{meal}</li>
+                      <li className="mealmap">{meal}</li>
                     </ul>
                   );
                 })}
@@ -205,7 +206,7 @@ export const MealPlannerShopping = () => {
                 {lunch.map((meal) => {
                   return (
                     <ul className="m-0">
-                      <li id="mealmap">{meal}</li>
+                      <li className="mealmap">{meal}</li>
                     </ul>
                   );
                 })}
@@ -229,7 +230,7 @@ export const MealPlannerShopping = () => {
                 {dinner.map((meal) => {
                   return (
                     <ul className="m-0">
-                      <li id="mealmap">{meal}</li>
+                      <li className="mealmap">{meal}</li>
                     </ul>
                   );
                 })}
@@ -276,7 +277,7 @@ export const MealPlannerShopping = () => {
                 {healthyfat.map((meal) => {
                   return (
                     <ul className="m-0">
-                      <li id="mealmap">{meal}</li>
+                      <li className="mealmap">{meal}</li>
                     </ul>
                   );
                 })}
@@ -300,7 +301,7 @@ export const MealPlannerShopping = () => {
                 {protein.map((meal) => {
                   return (
                     <ul className="m-0">
-                      <li id="mealmap">{meal}</li>
+                      <li className="mealmap">{meal}</li>
                     </ul>
                   );
                 })}
@@ -324,7 +325,7 @@ export const MealPlannerShopping = () => {
                 {dairy.map((meal) => {
                   return (
                     <ul className="m-0">
-                      <li id="mealmap">{meal}</li>
+                      <li className="mealmap">{meal}</li>
                     </ul>
                   );
                 })}
@@ -348,7 +349,7 @@ export const MealPlannerShopping = () => {
                 {grainscarbohydrates.map((meal) => {
                   return (
                     <ul className="m-0">
-                      <li id="mealmap">{meal}</li>
+                      <li className="mealmap">{meal}</li>
                     </ul>
                   );
                 })}
@@ -372,7 +373,7 @@ export const MealPlannerShopping = () => {
                 {vegetables.map((meal) => {
                   return (
                     <ul className="m-0">
-                      <li id="mealmap">{meal}</li>
+                      <li className="mealmap">{meal}</li>
                     </ul>
                   );
                 })}
@@ -396,31 +397,16 @@ export const MealPlannerShopping = () => {
                 {fruits.map((meal) => {
                   return (
                     <ul className="m-0">
-                      <li id="mealmap">{meal}</li>
+                      <li className="mealmap">{meal}</li>
                     </ul>
                   );
                 })}
               </DailyMealPlanning>
               <DailyMealPlanning mealid="All">
-                <form
-                  onSubmit={(event) => {
-                    event.preventDefault();
-                    handleSubmit(event, "all");
-                  }}
-                >
-                  <input
-                    className="inputmealplanner"
-                    placeholder="Add an item to your list"
-                    value={allInput}
-                    onChange={(event) => {
-                      setAllInput(event.target.value);
-                    }}
-                  ></input>
-                </form>
                 {all.map((meal) => {
                   return (
                     <ul className="m-0">
-                      <li id="mealmap">{meal}</li>
+                      <li className="mealmap">{meal}</li>
                     </ul>
                   );
                 })}

@@ -1,13 +1,13 @@
 #dailymealplanner {
   background-color: whitesmoke;
   width: 60%;
-  margin-left:40%;
+  margin-left: 40%;
   text-align: center;
 }
 #mealplannershopping {
   background-color: whitesmoke;
   width: 60%;
-  margin-right:40%;
+  margin-right: 40%;
   text-align: center;
 }
 .inputmealplanner {
@@ -15,10 +15,12 @@
   text-align: center;
   margin-bottom: 5px;
 }
-#mealmap {
+.mealmap {
   width: 30px;
-  color: green;
-  margin: 0px;
+  margin-right: 0px;
+  margin-left: -20px;
+  color: #2b4e1b;
+  margin:auto;
 }
 .dailymealplannerdescription {
   color: #2b4e1b;

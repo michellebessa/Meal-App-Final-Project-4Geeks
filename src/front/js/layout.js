@@ -10,11 +10,11 @@ import { FoodCategories } from "./pages/foodcategories";
 import { MealPlannerShopping } from "./pages/mealplannershopping";
 import { Pantry } from "./pages/pantry";
 import { Recipes } from "./pages/recipes";
+import { RecipesDetails }from "./pages/recipedetails";
 import { ContactUs } from "./pages/contactus";
 import { Login } from "./component/login";
 import { CreateAccount } from "./pages/createaccount";
 import { Footer } from "./component/footer";
-import { RecipesDetails }from "./pages/recipedetails";
 
 
 //create your first component
@@ -37,7 +37,7 @@ const Layout = () => {
               <Route element={<MealPlannerShopping />} path="/mealplannershopping" />
               <Route element={<Pantry />} path="/pantry" />
               <Route element={<Recipes />} path="/recipes" />
-              <Route element={<RecipesDetails />} path="/recipesdetails/:theid" />
+              <Route element={<RecipesDetails />} path="/recipedetails/:theid" />
               <Route element={<ContactUs />} path="/contactus" />
               <Route element={<Login />} path="/login" />
               <Route element={<CreateAccount />} path="/createaccount" />

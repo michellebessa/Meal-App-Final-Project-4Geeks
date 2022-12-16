@@ -61,8 +61,11 @@ export const RecipesDetails = () => {
             <div className="modal-dialog">
               <div className="modal-content">
                 <div className="modal-header">
-                  <h1 className="modal-title fs-5" id="exampleModalLabel">
-                  {data &&data.title}
+                  <h1
+                    className="modal-title fs-5 m-auto"
+                    id="exampleModalLabel"
+                  >
+                    {data && data.title}
                   </h1>
                   <button
                     type="button"
@@ -71,7 +74,9 @@ export const RecipesDetails = () => {
                     aria-label="Close"
                   ></button>
                 </div>
-                <div className="modal-body">{data && parse(data.instructions)}</div>
+                <div className="modal-body">
+                  <strong>{data && parse(data.instructions)}</strong>
+                </div>
                 <div className="modal-footer">
                   <button
                     type="button"

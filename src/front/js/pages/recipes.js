@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
-import { WeekDay, DailyMealPlanning } from "./codecleaner.js";
+import { DailyMealPlanning } from "./codecleaner.js";
 import "../../styles/recipes.css";
+import { Carousel, CarouselSlide } from "../pages/carousel";
+import "../../styles/carousel.css";
 
 const RecipesModal = (props) => {
   return (
@@ -27,23 +29,30 @@ export const Recipes = () => {
   const { store, actions } = useContext(Context);
   const [recipes, setRecipes] = useState();
   const [diet, setDiet] = useState("*");
+  useEffect(() => {
+    actions.getRecipeData()
+  }, []);
 
   console.log("hello", store);
 
-  function getRecipes() {
-    fetch(
-      `https://api.spoonacular.com/recipes/complexSearch/diet=${diet}?apiKey=0ed22b6105b2418e80a5af8d0f8a2353`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setRecipes(data);
-        console.log(data);
-        console.log(diet);
-      })
-      .catch(() => {
-        console.log("error");
-      });
-  }
+  const [index, setIndex] = useState(1);
+  const handleSelect = (selectIndex, i) => {
+    setIndex(selectIndex);
+  };
+  // function getRecipes() {
+  //   fetch(
+  //     `https://api.spoonacular.com/recipes/complexSearch/diet=${diet}?apiKey=0ed22b6105b2418e80a5af8d0f8a2353`
+  //   )
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setRecipes(data);
+  //       console.log(data);
+  //       console.log(diet);
+  //     })
+  //     .catch(() => {
+  //       console.log("error");
+  //     });
+  // }
 
   return (
     <div className="mt-5">
@@ -67,35 +76,27 @@ export const Recipes = () => {
                   className="carousel slide"
                   data-bs-ride="carousel"
                 >
-                  <div className="carousel-inner">
-                    <div className="carousel-item active">
-                      {store.complex.map((item, index) => {
-                        return (
-                          <div key={item.id}>
-                            <img
-                              src={item.image}
-                              className="d-block w-50 h-40 m-auto"
-                              alt="..."
+                  <div className="carousel-inner w-50 h-40 m-auto">
+                    <div
+                      className="carousel-item active"
+                      onSelect={handleSelect}
+                    >
+                      <Carousel carouselId="someCarousel">
+                        {store.complex.map((elem, idx) => {
+                          return (
+                            <CarouselSlide
+                              id={elem.id}
+                              name={elem.title}
+                              src={elem.image}
+                              alt={elem.title}
+                              isFirst={idx === 0}
+                              key={idx}
+                              style={{ width: "200px" }}
                             />
-                            {item.title}
-                          </div>
-                        );
-                      })}
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src="https://c4.wallpaperflare.com/wallpaper/373/952/839/wooden-spoon-condiments-background-wallpaper-preview.jpg"
-                        className="d-block w-100"
-                        alt="..."
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src="https://c4.wallpaperflare.com/wallpaper/373/952/839/wooden-spoon-condiments-background-wallpaper-preview.jpg"
-                        className="d-block w-100"
-                        alt="..."
-                      />
-                    </div>
+                          );
+                        })}
+                      </Carousel>
+                    </div>        
                   </div>
                   <button
                     className="carousel-control-prev"

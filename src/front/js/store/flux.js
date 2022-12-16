@@ -4,13 +4,13 @@ const getState = ({ getStore, getActions, setStore }) => {
     store: {
       user: [],
       recipes: [],
+      data: [],
       message: null,
       alert: {
         type: "",
         msg: "",
         show: false,
       },
-      key: "0ed22b6105b2418e80a5af8d0f8a2353",
       complex: [],
       token: null,
       message: null,
@@ -32,7 +32,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       //HERE IS THE SPOONACULAR DATA FOR THE RECIPES
       getRecipeData: () => {
         fetch(
-          'https://api.spoonacular.com/recipes/complexSearch?apiKey=0ed22b6105b2418e80a5af8d0f8a2353'
+          "https://api.spoonacular.com/recipes/complexSearch?apiKey=6cc350229f144af98609bf421003d6e3"
         )
           .then((response) => response.json())
           .then((responseAsJson) => {
@@ -43,7 +43,19 @@ const getState = ({ getStore, getActions, setStore }) => {
             console.log("Looks like there was a problem: \n", error);
           });
       },
-
+      getRecipeDetails: (id) => {
+        fetch(
+          `https://api.spoonacular.com/recipes/716429/information?includeNutrition=false?apiKey=6cc350229f144af98609bf421003d6e3`
+        )
+          .then((response) => response.json())
+          .then((responseAsJson) => {
+            setStore({ data: responseAsJson.results });
+            console.log("These are my recipes", getStore().data);
+          })
+          .catch((error) => {
+            console.log("Looks like there was a problem: \n", error);
+          });
+      },
       findByNutrients: (carbs, proteins) => {
         fetch(
           `https://api.spoonacular.com/recipes/complexSearch${

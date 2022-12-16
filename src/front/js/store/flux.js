@@ -32,12 +32,13 @@ const getState = ({ getStore, getActions, setStore }) => {
       //HERE IS THE SPOONACULAR DATA FOR THE RECIPES
       getRecipeData: () => {
         fetch(
-          "https://api.spoonacular.com/recipes/complexSearch?apiKey=6cc350229f144af98609bf421003d6e3"
+          "https://api.spoonacular.com/recipes/complexSearch?apiKey=35aaf0fcff674e94b10b99b4e6c69a6b"
         )
           .then((response) => response.json())
           .then((responseAsJson) => {
             setStore({ complex: responseAsJson.results });
             console.log("These are my recipes", getStore().complex);
+            console.log("These are my actual recipes", responseAsJson);
           })
           .catch((error) => {
             console.log("Looks like there was a problem: \n", error);
@@ -45,12 +46,13 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
       getRecipeDetails: (id) => {
         fetch(
-          `https://api.spoonacular.com/recipes/716429/information?includeNutrition=false?apiKey=6cc350229f144af98609bf421003d6e3`
+          `https://api.spoonacular.com/recipes/${id}/information?apiKey=35aaf0fcff674e94b10b99b4e6c69a6b`
         )
           .then((response) => response.json())
           .then((responseAsJson) => {
-            setStore({ data: responseAsJson.results });
-            console.log("These are my recipes", getStore().data);
+            setStore({ data: responseAsJson });
+            console.log("My recipes", getStore().data);
+            console.log("This is my actual data", responseAsJson);
           })
           .catch((error) => {
             console.log("Looks like there was a problem: \n", error);

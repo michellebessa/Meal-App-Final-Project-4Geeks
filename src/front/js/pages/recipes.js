@@ -82,7 +82,7 @@ export const Recipes = () => {
                       onSelect={handleSelect}
                     >
                       <Carousel carouselId="someCarousel">
-                        {store.complex.map((elem, idx) => {
+                        {store.complex&&store.complex.map((elem, idx) => {
                           return (
                             <CarouselSlide
                               id={elem.id}

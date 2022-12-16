@@ -5,5 +5,7 @@ export const RecipesDetails = () => {
   const { store, actions } = useContext(Context);
   console.log(store)
 
-  return <div>hello</div>;
+  return <div>
+    {/* {store.data} */}
+  </div>;
 };

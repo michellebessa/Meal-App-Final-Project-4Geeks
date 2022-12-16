@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/navbar.css";
+import { Context } from "../store/appContext";
 
 export const Navbar = () => {
+  const { store, actions } = useContext(Context);
+  function handleLogOut() {
+    sessionStorage.clear();
+    navigate("/");
+  }
   return (
     <nav className="navbar navbar-light">
       <div className="container">
@@ -30,15 +36,17 @@ export const Navbar = () => {
           <span className="navbar-brand h1">Contact Us</span>
         </Link>
 
-        <Link to="/login">
-          <span className="navbar-brand h1">Login</span>
-        </Link>
+        {store.token && store.token != "" && store.token != undefined ? (
+          <Link to="/" className="navbar-brand h1" onClick={handleLogOut}>
+            Logout
+          </Link>
+        ) : (
+          <Link to="/login">
+            <span className="navbar-brand h1">Login</span>
+          </Link>
+        )}
 
-        {/* <Button className="button-83" onClick={handleLogOut}>
-          Logout
-        </Button>
-
-        <Button className="button-83" as={Link} to="/login">
+        {/* <Button as={Link} to="/login">
           Login
         </Button> */}
       </div>
